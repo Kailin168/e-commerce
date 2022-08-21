@@ -1,24 +1,39 @@
-import logo from './logo.svg';
 import './App.css';
+import { Routes, Route, useLocation} from "react-router-dom";
+import Home from "./Pages/Home";
+import About from "./Pages/About";
+import Login from "./Pages/Login";
+import NavBar from './commonComponents/NavBar';
+import SideNavBar from './commonComponents/SideNavBar';
+import Logo from './commonComponents/Logo';
+import { useState } from 'react';
+import "./index.css"
+import SignIn from './Pages/SignIn';
+import Footer from "./Pages/Footer";
+import ItemCard from "./Pages/ItemCard";
 
 function App() {
+
+  const [isShowLogin, setIsShowLogin] = useState(false)
+  const handleLoginClick = () => {
+    setIsShowLogin((isShowLogin) => !isShowLogin)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+    <Logo />
+    <NavBar handleLoginClick={handleLoginClick} isShowLogin={isShowLogin}/>
+    {/* <SignIn isShowLogin={isShowLogin} /> */}
+    <SideNavBar />
+    <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/about" element={<About />} />
+    </Routes>
+    <Footer />
+    <ItemCard />
     </div>
+
   );
 }
 
