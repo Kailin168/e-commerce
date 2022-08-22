@@ -17,7 +17,7 @@ function Footer() {
             <Grid item sm={5} xs={12}>
               <MapIcon color="action" />
               <Typography paragraph>
-                <Link href="https://www.google.com/maps" target="_blank" alt="<MAP>">Find Us</Link>.
+                <Link href="https://www.google.com/maps/place/11+Broadway,+New+York,+NY+10004/@40.7052717,-74.0139684,17z/data=!3m1!4b1!4m5!3m4!1s0x89c25a1160e06645:0x223402a1f64f844f!8m2!3d40.7052717!4d-74.0139684" target="_blank" alt="<MAP>">Find Us</Link>.
               </Typography>
             </Grid>
             <Grid item sm={5} xs={11}>

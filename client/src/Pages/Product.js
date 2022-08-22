@@ -1,4 +1,3 @@
-import ItemCard from "../commonComponents/ItemCard";
 import SideNavBar from '../commonComponents/SideNavBar';
 
 function Product() {

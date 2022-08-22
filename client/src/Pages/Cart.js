@@ -1,13 +1,21 @@
 import ShoppingCart from "./ShoppingCart";
-import CheckOut from "./CheckOut";
+import CheckOutButton from "./CheckOutButton";
 import ItemTotal from "./ItemTotal";
 
 function Cart() {
   return (
-    <div>
-    <ShoppingCart />
-    <ItemTotal />
-    <CheckOut />
+    <div style={{
+      display: "flex"
+    }}>
+      <div>
+        <ShoppingCart style={{
+      flexDirection: "column",
+    }}/>
+      </div>
+      <div>
+        <ItemTotal />
+        <CheckOutButton />
+      </div>
     </div>
 
   );

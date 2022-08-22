@@ -9,8 +9,15 @@ import NavBar from './commonComponents/NavBar';
 import Logo from './commonComponents/Logo';
 import "./index.css"
 import Footer from "./Pages/Footer";
+import { useEffect, useState } from "react";
 
 function App() {
+
+  // const [user, setUser] = useState
+
+  // useEffect(()=>{
+
+  // },[])
 
   return (
     <div>

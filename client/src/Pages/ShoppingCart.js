@@ -3,7 +3,14 @@ import React from 'react';
 
 function ShoppingCart() {
   return (
-    <div >
+    <div style={{
+      backgroundColor: "red",
+      height: "500px",
+      width: "900px",
+      flexGrow: "3",
+      position: "relative",
+      float: "right"
+    }}>
       List of Items
     </div>
   );
