@@ -23,7 +23,7 @@ function Footer() {
             <Grid item sm={5} xs={11}>
               <InfoIcon color="action" />
               <Typography paragraph>
-                For more Information, Please visit<Link href="https://reactjs.org/" target="_blank">ReactJS</Link>.
+                For more Information, Please visit<Link href="/about">About</Link>.
               </Typography>
             </Grid>
           </Grid>

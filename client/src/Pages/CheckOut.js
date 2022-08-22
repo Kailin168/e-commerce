@@ -1,12 +1,12 @@
 import React from "react";
 
-function About() {
+function CheckOut() {
   return (
     <div>
-    All About Vegan Food
+    checkOut
     </div>
 
   );
 }
 
-export default About;
+export default CheckOut;

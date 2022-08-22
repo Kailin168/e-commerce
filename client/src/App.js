@@ -1,37 +1,30 @@
 import './App.css';
-import { Routes, Route, useLocation} from "react-router-dom";
+import { Routes, Route} from "react-router-dom";
 import Home from "./Pages/Home";
 import About from "./Pages/About";
-import Login from "./Pages/Login";
-import NavBar from './commonComponents/NavBar';
-import SideNavBar from './commonComponents/SideNavBar';
-import Logo from './commonComponents/Logo';
-import { useState } from 'react';
-import "./index.css"
 import SignIn from './Pages/SignIn';
+import Cart from './Pages/Cart';
+import Product from "./Pages/Product";
+import NavBar from './commonComponents/NavBar';
+import Logo from './commonComponents/Logo';
+import "./index.css"
 import Footer from "./Pages/Footer";
-import ItemCard from "./Pages/ItemCard";
 
 function App() {
-
-  const [isShowLogin, setIsShowLogin] = useState(false)
-  const handleLoginClick = () => {
-    setIsShowLogin((isShowLogin) => !isShowLogin)
-  }
 
   return (
     <div>
     <Logo />
-    <NavBar handleLoginClick={handleLoginClick} isShowLogin={isShowLogin}/>
-    {/* <SignIn isShowLogin={isShowLogin} /> */}
-    <SideNavBar />
+    <NavBar/>
     <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/SignIn" element={<SignIn />} />
         <Route path="/about" element={<About />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/product" element={<Product />} />
+        {/* <Route path="/product/*" element={<NotFoundProduct />} /> */}
     </Routes>
     <Footer />
-    <ItemCard />
     </div>
 
   );

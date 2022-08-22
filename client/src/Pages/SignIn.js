@@ -1,33 +1,44 @@
 import React from "react";
+import { useState } from "react";
 
-function SignIn({ isShowLogin }) {
+
+function SignIn() {
+  const [inputs, setInputs] = useState({});
+
+  const handleChange = (event) => {
+    const name = event.target.name;
+    const value = event.target.value;
+    setInputs(values => ({...values, [name]: value}))
+  }
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(inputs);
+  }
+
   return (
-    <div className={`${!isShowLogin ? "active" : ""} show`}>
-      <div className="login-form">
-        <div className="form-box solid">
-          <form>
-            <h1 className="login-text">
-              Sign In
-            </h1>
-            <label>
-              UserName
-            </label>
-            <input
-              type="text"
-              name="username"
-              className="login-box" /><br></br>
-            <input
-              type="submit"
-              value="LOGIN"
-              className="login-btn" /><br></br>
-            <label>
-              Create an Account
-            </label>
-          </form>
-        </div>
-      </div>
+    <div>
+      SIGN IN
+    <form onSubmit={handleSubmit}>
+      <label>Username:
+      <input 
+        type="text" 
+        name="username" 
+        value={inputs.username || ""} 
+        onChange={handleChange}
+      />
+      </label>
+      <label>Password:
+        <input 
+          type="text" 
+          name="password" 
+          value={inputs.password || ""} 
+          onChange={handleChange}
+        />
+        </label>
+        <input type="submit" />
+    </form>
     </div>
-
-  );
+  )
 }
 export default SignIn;
