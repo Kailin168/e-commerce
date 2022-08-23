@@ -75,11 +75,11 @@ function SignIn() {
 
 
   return (
-    <div style={{ textAlign: "center", padding: "20px", background: "aqua", borderRadius: "8px", margin: "0 auto", width: "50%" }}>
+    <div style={{ textAlign: "center", padding: "20px", background: "#98c1d9", borderRadius: "8px", margin: "0 auto", width: "50%" }}>
       <div>
         SIGN IN
         <form onSubmit={handleSubmit}>
-          <div style={{margin: "10px 0"}}>
+          <div style={{ margin: "10px 0" }}>
             <label>Username:</label>
             <input
               type="text"
@@ -88,7 +88,7 @@ function SignIn() {
               value={username || ""}
               onChange={handleUsername} />
           </div>
-          <div style={{margin: "10px 0"}}>
+          <div style={{ margin: "10px 0" }}>
             <label>Password:</label>
             <input
               type="password"
@@ -106,51 +106,56 @@ function SignIn() {
       <div>
         Create an Account:
         <form onSubmit={handleAccountSubmit}>
-          <label>First Name:
+          <div style={{ margin: "10px 0" }}>
+            <label>First Name:</label>
             <input
               type="text"
               name="firstname"
               placeholder="First Name"
               value={firstName || ""}
               onChange={handleAccountFirstName}
-            /> <br></br>
-          </label>
-          <label>Last Name:
+            />
+          </div>
+          <div style={{ margin: "10px 0" }}>
+            <label>Last Name:</label>
             <input
               type="text"
               name="username"
               placeholder="Last Name"
               value={lastName || ""}
               onChange={handleAccountLastName}
-            /> <br></br>
-          </label>
-          <label>Username:
+            />
+          </div>
+          <div style={{ margin: "10px 0" }}>
+            <label>Username:</label>
             <input
               type="text"
               name="username"
               placeholder="username"
               value={accountUsername || ""}
               onChange={handleAccountUsername}
-            /> <br></br>
-          </label>
-          <label>Email:
+            />
+          </div>
+          <div style={{ margin: "10px 0" }}>
+            <label>Email:</label>
             <input
               type="text"
               name="email"
               placeholder="e-mail"
               value={email || ""}
               onChange={handleAccountEmail}
-            /> <br></br>
-          </label>
-          <label>Password:
+            />
+          </div>
+          <div style={{ margin: "10px 0" }}>
+            <label>Password:</label>
             <input
               type="password"
               name="password"
               placeholder="password"
               value={accountPassword || ""}
               onChange={handleAccountPassword}
-            /> <br></br>
-          </label>
+            />
+          </div>
           <input type="submit" />
         </form>
       </div>
