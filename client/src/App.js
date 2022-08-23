@@ -15,19 +15,35 @@ import ProductDetails from './commonComponents/ProductDetails';
 
 function App() {
 
-  // const [user, setUser] = useState
+  const [user, setUser] = useState({})
 
-  // useEffect(()=>{
+  useEffect(() => {
+    fetch('/me')
+    .then(res => {
 
-  // },[])
+      if (res.ok) {
+        res.json()
+        .then(data => {
+          setUser(data)
+        })
+      }
+
+    })
+  }, [])
+
+  const handleLogout = () => {
+    fetch('/logout', {method: 'DELETE'})
+    setUser({})
+  }
 
   return (
     <div>
     <Logo />
     <NavBar/>
+    <button onClick={handleLogout}>Logout</button>
     <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/SignIn" element={<SignIn />} />
+        <Route path="/SignIn" element={<SignIn user={user} setUser={setUser}/>} />
         <Route path="/about" element={<About />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/product" element={<Product />} />

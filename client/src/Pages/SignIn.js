@@ -1,9 +1,8 @@
-import { ClassNames } from "@emotion/react";
 import React from "react";
 import { useState, useEffect } from "react";
 
 
-function SignIn() {
+function SignIn({user, setUser}) {
   const [username, setUsername] = useState("")
   const [password, setPassword] = useState("")
   const [errorMessage, setErrorMessage] = useState("")
@@ -44,21 +43,27 @@ function SignIn() {
       password
     }
     console.log(logIn)
-
-    //   fetch("./login", {
-    //     method: "POST",
-    //     headers: {
-    //       'Content-Type':
-    //     }
-    //     body: JSON.stringify({username, password})
-    //   })
-    //   .then(res=>res.json())
-    //   .then(data => {serUser(data)})
-    // }
-
-    // if (user.id) {
-
-    // }
+    fetch('/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accepts': 'application/json'
+      },
+      body: JSON.stringify({ username, password })
+    })
+    .then(res => {
+      if (res.ok) {
+        res.json()
+          .then(data => {
+            console.log(data)
+            setErrorMessage('')
+            setUser(data)
+          })
+      } else {
+        res.json()
+        .then(({error}) => setErrorMessage(error))
+      }
+    })
   }
 
   const handleAccountSubmit = (e) => {
@@ -71,6 +76,14 @@ function SignIn() {
       password: accountUsername,
     }
     console.log(createAccount)
+  }
+
+  if (user.id) {
+    return (
+      <div>
+      Already logged in!
+      </div>
+    )
   }
 
 
@@ -98,7 +111,7 @@ function SignIn() {
               onChange={handlePassword}
             />
           </div>
-          {/* {errorMessage && <div style={{ color: 'red' }}>{errorMessage}</div>} */}
+          <p style={{color: 'red'}}>{errorMessage ? errorMessage : null}</p>
           <input type="submit" />
         </form>
       </div>
