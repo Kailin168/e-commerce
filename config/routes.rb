@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
   
+  resources :products
+  resources :reviews
+  resources :carts
+  resources :users
   post '/login', to: "sessions#create"
   
   # Routing logic: fallback requests for React Router.
