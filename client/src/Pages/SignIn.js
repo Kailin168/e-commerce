@@ -43,13 +43,13 @@ function SignIn({user, setUser}) {
       password
     }
     console.log(logIn)
-    fetch('/login', {
+    fetch('/user/create', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         'Accepts': 'application/json'
       },
-      body: JSON.stringify({ username, password })
+      body: JSON.stringify(logIn)
     })
     .then(res => {
       if (res.ok) {
@@ -76,6 +76,27 @@ function SignIn({user, setUser}) {
       password: accountUsername,
     }
     console.log(createAccount)
+    fetch('/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accepts': 'application/json'
+      },
+      body: JSON.stringify(createAccount)
+    })
+    .then(res => {
+      if (res.ok) {
+        res.json()
+          .then(data => {
+            console.log(data)
+            setErrorMessage('')
+            setUser(data)
+          })
+      } else {
+        res.json()
+        .then(({error}) => setErrorMessage(error))
+      }
+    })
   }
 
   if (user.id) {
