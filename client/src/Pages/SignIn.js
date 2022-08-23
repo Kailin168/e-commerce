@@ -75,20 +75,21 @@ function SignIn() {
 
 
   return (
-    <div style={{ textAlign: "center", padding: "20px", background: "aqua", borderRadius: "8px" }}>
+    <div style={{ textAlign: "center", padding: "20px", background: "aqua", borderRadius: "8px", margin: "0 auto", width: "50%" }}>
       <div>
         SIGN IN
         <form onSubmit={handleSubmit}>
-          <label>Username:
+          <div style={{margin: "10px 0"}}>
+            <label>Username:</label>
             <input
               type="text"
               name="username"
               placeholder="username"
               value={username || ""}
-              onChange={handleUsername}
-            /><br></br>
-          </label>
-          <label>Password:
+              onChange={handleUsername} />
+          </div>
+          <div style={{margin: "10px 0"}}>
+            <label>Password:</label>
             <input
               type="password"
               name="password"
@@ -96,9 +97,8 @@ function SignIn() {
               value={password || ""}
               onChange={handlePassword}
             />
-            {/* {errorMessage && <div style={{ color: 'red' }}>{errorMessage}</div>} */}
-          </label>
-          <br></br>
+          </div>
+          {/* {errorMessage && <div style={{ color: 'red' }}>{errorMessage}</div>} */}
           <input type="submit" />
         </form>
       </div>

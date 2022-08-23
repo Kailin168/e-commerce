@@ -5,11 +5,11 @@ function ItemTotal() {
   return (
     <div style={{
       backgroundColor: "yellow",
-      height: "400px",
-      width: "200px",
-      flexGrow: "1",
-      position: "relative",
-      float: "right"
+      height: "100%",
+      // width: "200px",
+      // flexGrow: "1",
+      // position: "relative",
+      // float: "right"
     }}>
       SubTotal
     </div>

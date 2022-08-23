@@ -5,11 +5,11 @@ function ShoppingCart() {
   return (
     <div style={{
       backgroundColor: "red",
-      height: "500px",
-      width: "900px",
-      flexGrow: "3",
-      position: "relative",
-      float: "right"
+      height: "100%",
+      // width: "900px",
+      // flexGrow: "3",
+      // position: "relative",
+      // float: "right"
     }}>
       List of Items
     </div>

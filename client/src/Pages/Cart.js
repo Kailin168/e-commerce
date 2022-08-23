@@ -7,12 +7,16 @@ function Cart() {
     <div style={{
       display: "flex"
     }}>
-      <div>
-        <ShoppingCart style={{
-      flexDirection: "column",
-    }}/>
+      <div style={{
+        flex: 5
+      }}>
+        <ShoppingCart />
       </div>
-      <div>
+      <div style={{
+        flexDirection: "column",
+        display: "flex",
+        flex: 1
+      }}>
         <ItemTotal />
         <CheckOutButton />
       </div>
