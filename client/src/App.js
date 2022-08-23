@@ -11,6 +11,7 @@ import "./index.css"
 import Footer from "./Pages/Footer";
 import { useEffect, useState } from "react";
 import Map from './Pages/Map';
+import ProductDetails from './commonComponents/ProductDetails';
 
 function App() {
 
@@ -31,6 +32,7 @@ function App() {
         <Route path="/cart" element={<Cart />} />
         <Route path="/product" element={<Product />} />
         <Route path="/map" element={<Map />} />
+        <Route path="/productDetails" element={<ProductDetails />} />
         {/* <Route path="/product/*" element={<NotFoundProduct />} /> */}
     </Routes>
     <Footer />
