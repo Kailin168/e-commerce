@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(version: 2022_08_23_173302) do
   create_table "reviews", force: :cascade do |t|
     t.integer "product_id"
     t.integer "user_id"
-    t.string "reviews"
+    t.string "review"
     t.integer "rating"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
