@@ -70,13 +70,13 @@ export default function SideNavBar() {
       <DisplayItems itemType={"Vegetable"}/>
       </SideNavBarPanel>
       <SideNavBarPanel value={value} index={2}>
-      <DisplayItems itemType={"Bakery"}/>
+      Coming Soon!
       </SideNavBarPanel>
       <SideNavBarPanel value={value} index={3}>
-      <DisplayItems itemType={"Frozen"}/>
+      Coming Soon!
       </SideNavBarPanel>
       <SideNavBarPanel value={value} index={4}>
-      <DisplayItems itemType={"Drinks"}/>
+      Coming Soon!
       </SideNavBarPanel>
     </Box>
   );

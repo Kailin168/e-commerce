@@ -43,7 +43,7 @@ function SignIn({user, setUser}) {
       password
     }
     console.log(logIn)
-    fetch('/user/create', {
+    fetch('/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -69,14 +69,14 @@ function SignIn({user, setUser}) {
   const handleAccountSubmit = (e) => {
     e.preventDefault();
     const createAccount = {
-      firstName: firstName,
-      lastName: lastName,
+      first_name: firstName,
+      last_name: lastName,
       email: email,
-      username: accountPassword,
-      password: accountUsername,
+      username: accountUsername,
+      password: accountPassword,
     }
     console.log(createAccount)
-    fetch('/login', {
+    fetch('/create_user', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

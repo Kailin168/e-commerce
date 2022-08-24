@@ -3,23 +3,24 @@ import ItemCard from "./ItemCard";
 
 function DisplayItems({ itemType }) {
 
-  const [items, setItems] = useState([1])
+  const [items, setItems] = useState([])
 
-// useEffect(()=>{
-//   fetch(http...../itemtype)
-//   .then(res=>res.json())
-//   .then(setItems)
-// },[])
+  useEffect(() => {
+    fetch('/products')
+      .then(res => res.json())
+      .then(setItems)
+  }, [])
+  // console.log(items)
 
+  const showItems = items.map(item => <ItemCard item={item} />)
   return (
     <div>
-      {itemType}
-      {items.map((item) => {
+      {/* {items.map((item) => {
         return (
-          <ItemCard />
+          <ItemCard item={item} />
         )
-      })}
-
+      })} */}
+      {showItems}
     </div>
 
   );

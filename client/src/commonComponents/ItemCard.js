@@ -11,14 +11,14 @@ import ButtonGroup from '@mui/material/ButtonGroup';
 import AddBoxIcon from '@mui/icons-material/AddBox';
 import RemoveCircleIcon from '@mui/icons-material/RemoveCircle';
 
-export default function ItemCard() {
+export default function ItemCard({item}) {
 
-  const [quantityCount, setQuantityCount] = useState(3);
+  const [quantityCount, setQuantityCount] = useState(1);
 
   let navigate = useNavigate();
 
   const showProductDetails = () =>{
-    let path =  "/productDetails";
+    let path =  `/productDetails/${item.id}`;
     navigate(path);
   }
   
@@ -27,15 +27,17 @@ export default function ItemCard() {
       <CardMedia
         component="img"
         height="140"
-        image="https://images.pexels.com/photos/206959/pexels-photo-206959.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        image={item.image}
         alt="APPLE"
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          Fruits
+          {item.name}
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          An apple is an edible fruit produced by an apple tree. Apple trees are cultivated worldwide and are the most widely grown species in the genus Malus. The tree originated in Central Asia, where its wild ancestor, Malus sieversii, is still found today.
+          {item.weight}
+          <br></br>
+          {item.price}
         </Typography>
       </CardContent>
       <CardActions>

@@ -3,9 +3,9 @@ class CreateProducts < ActiveRecord::Migration[6.1]
     create_table :products do |t|
       t.string :name
       t.string :category
-      t.integer :price
+      t.float :price
       t.string :image
-      t.float :weight
+      t.string :weight
       t.string :description
       t.integer :stars
 

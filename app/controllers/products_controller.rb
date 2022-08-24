@@ -1,6 +1,4 @@
 class ProductsController < ApplicationController
-<<<<<<< Updated upstream
-=======
 
   skip_before_action :authorize, only: [ :index, :filter_category]
 
@@ -8,9 +6,13 @@ class ProductsController < ApplicationController
     render json: Product.all
   end
 
+
   def filter_category
     render json: Product.select {|item| item.category = 'fruit' } 
   end
 
->>>>>>> Stashed changes
+  def show
+    render json: Product.find(params[:id])
+  end
+
 end
