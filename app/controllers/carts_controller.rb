@@ -3,10 +3,9 @@ class CartsController < ApplicationController
 # full CRUD for Carts 
 
 #show all carts 
-    def index
-        render json: nil
-
-    end
+def index
+    render json: Cart.all
+end
 
     #
     def show 

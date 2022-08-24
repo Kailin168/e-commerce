@@ -8,7 +8,7 @@ puts "created users!"
 # creates faker users
 User3 = User.create(first_name: "Papa", last_name: "Johns", username: "BigPoppaPizza", password: "123456", email: "PimpinPizza@gmail.com")
 User4 = User.create(first_name: "Bubba", last_name: "Gump", username: "BumpyGumpy", password: "123456", email: "GumpMan@gmail.com")
-User5 = User.create(first_name: "PF", last_name: "Chang", username: "PFCheezey", password: "123456", email: "Changy@gmail.com")
+User5 = Usrialser.create(first_name: "PF", last_name: "Chang", username: "PFCheezey", password: "123456", email: "Changy@gmail.com")
 User6 = User.create(first_name: "Bob", last_name: "Evans", username: "NoProbBob", password: "123456", email: "BobbyBreezy@gmail.com")
 User7 = User.create(first_name: "Roy", last_name: "Rodgers", username: "CowboyRoy", password: "123456", email: "GetrDone@gmail.com")
 

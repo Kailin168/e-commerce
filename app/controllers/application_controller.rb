@@ -9,10 +9,18 @@ class ApplicationController < ActionController::API
     @current_user ||= User.find_by(id: session[:user_id])
   end
 
+<<<<<<< Updated upstream
   def authorize
     unless current_user
       render json: { message: 'Not authorized' }, status: 401
     end
   end
+=======
+  #def authorize
+  #  unless current_user
+  #    render json: { message: 'Not authorized' }, status: 401
+  #  end
+ # end
+>>>>>>> Stashed changes
 
 end

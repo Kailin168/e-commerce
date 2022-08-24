@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   
+<<<<<<< Updated upstream
   resources :products
+=======
+  resources :products, only:[:index, :filter_category]
+>>>>>>> Stashed changes
   resources :reviews
   resources :carts
   resources :users
