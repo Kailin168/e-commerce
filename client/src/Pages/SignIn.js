@@ -69,8 +69,8 @@ function SignIn({user, setUser}) {
   const handleAccountSubmit = (e) => {
     e.preventDefault();
     const createAccount = {
-      firstName: firstName,
-      lastName: lastName,
+      first_name: firstName,
+      last_name: lastName,
       email: email,
       username: accountPassword,
       password: accountUsername,
