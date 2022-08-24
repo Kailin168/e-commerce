@@ -1,14 +1,20 @@
 import React, { useEffect, useState } from "react";
 import ItemCard from "./ItemCard";
 
-function DisplayItems({ itemType }) {
+function DisplayItems({ categoryType }) {
 
   const [items, setItems] = useState([])
 
   useEffect(() => {
-    fetch('/products')
+    fetch(`/get_products?category=${categoryType}`)
       .then(res => res.json())
-      .then(setItems)
+      .then((data) => {
+        if (!data.error) {
+          setItems(data)
+        } else {
+          setItems([])
+        }
+      })
   }, [])
   // console.log(items)
 

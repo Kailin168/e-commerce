@@ -5,7 +5,11 @@ class ProductsController < ApplicationController
   end
   
 def show
-  render json: Product.find(params[:id]), include: [reviews: { only: [:comment]}]  
+  render json: Product.find(params[:id])
+end
+
+def get_products_by_category
+  render json: Product.where(category: params[:category])
 end
 
 end

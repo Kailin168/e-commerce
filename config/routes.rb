@@ -17,6 +17,7 @@ Rails.application.routes.draw do
 
   get '/cart', to: 'carts#show'
 
+  get '/get_products', to: 'products#get_products_by_category'
 
   get "*path", to: "fallback#index", constraints: ->(req) { !req.xhr? && req.format.html? }
 end

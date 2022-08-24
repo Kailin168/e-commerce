@@ -6,6 +6,7 @@ import AddBoxIcon from '@mui/icons-material/AddBox';
 import RemoveCircleIcon from '@mui/icons-material/RemoveCircle';
 import AuthContext from "../lib/AuthContext";
 import { useContext } from "react";
+import { minHeight } from "@mui/system";
 
 
 function ProductDetails() {
@@ -24,17 +25,18 @@ function ProductDetails() {
   console.log(vegetable)
 
 
-  const handleAddToCart =()=>{
+  const handleAddToCart = () => {
     fetch('/create_cart', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ 
+      body: JSON.stringify({
         product_id: params.productId,
         quantity: quantityCount,
       }),
-    })}
+    })
+  }
 
 
 
@@ -53,7 +55,7 @@ function ProductDetails() {
           background: "blue",
           flexDirection: 'column'
         }}>
-          <img styles={{ height: "50%", width: "50%"}} src={`${vegetable.image}`} />
+          <img height="300px" width="300px" src={`${vegetable.image}`} />
 
 
         </div>
@@ -61,29 +63,39 @@ function ProductDetails() {
           flexDirection: "column",
           display: "flex",
           flex: 1,
-          background: "pink"
+          background: "pink",
         }}>
           <div style={{
             background: "red",
+            minHeight: '500px',
             display: 'flex',
             flex: 5,
+            flexDirection: "column"
           }}>
-            {vegetable.name}
-            <br></br>
-            {vegetable.weight}
-            <br></br>
-            {vegetable.price}
-            <br></br>
-                <RemoveCircleIcon fontSize="small" onClick={() => {
-                  setQuantityCount(Math.max(quantityCount - 1, 0));
-                }}/>
+            <span>
+              {vegetable.name}
+            </span>
+            <span>
+              {vegetable.weight}
+            </span>
+            <span>
+              {vegetable.price}
+            </span>
+            <div style={{
+              display: 'flex',
+              alignItems: 'center'
+            }}>
+              <RemoveCircleIcon fontSize="small" onClick={() => {
+                setQuantityCount(Math.max(quantityCount - 1, 0));
+              }} />
               <p style={{
                 margin: "0 5px 0 5px",
                 fontSize: "25px"
               }}>{quantityCount}</p>
-                <AddBoxIcon fontSize="small" onClick={() => {
-                  setQuantityCount(quantityCount + 1);
-                }} />
+              <AddBoxIcon fontSize="small" onClick={() => {
+                setQuantityCount(quantityCount + 1);
+              }} />
+            </div>
             <Button size="small" onClick={handleAddToCart}>Add to Cart</Button>
           </div>
           <div style={{
