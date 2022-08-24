@@ -5,20 +5,22 @@ function DisplayItems({ itemType }) {
 
   const [items, setItems] = useState([])
 
-useEffect(()=>{
-  fetch('/products')
-  .then(res=>res.json())
-  .then(setItems)
-},[])
+  useEffect(() => {
+    fetch('/products')
+      .then(res => res.json())
+      .then(setItems)
+  }, [])
+  // console.log(items)
 
+  const showItems = items.map(item => <ItemCard item={item} />)
   return (
     <div>
-      {items.map((item) => {
+      {/* {items.map((item) => {
         return (
-          <ItemCard item={item}/>
+          <ItemCard item={item} />
         )
-      })}
-
+      })} */}
+      {showItems}
     </div>
 
   );

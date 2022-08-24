@@ -18,7 +18,7 @@ export default function ItemCard({item}) {
   let navigate = useNavigate();
 
   const showProductDetails = () =>{
-    let path =  "/productDetails";
+    let path =  `/productDetails/${item.id}`;
     navigate(path);
   }
   
