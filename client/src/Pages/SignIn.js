@@ -72,8 +72,8 @@ function SignIn({user, setUser}) {
       first_name: firstName,
       last_name: lastName,
       email: email,
-      username: accountPassword,
-      password: accountUsername,
+      username: accountUsername,
+      password: accountPassword,
     }
     console.log(createAccount)
     fetch('/create_user', {
