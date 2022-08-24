@@ -3,13 +3,17 @@
 User1 = User.create(first_name: "Ronald", last_name: "McDonald", username: "MickeyDeez", password: "123456", email: "MickeyDeez2003@gmail.com")
 User2 = User.create(first_name: "Johnny", last_name: "Rocket", username: "GottaBlast", password: "456789", email: "JohnnyToDaMoon@gmail.com")
 
-# creates faker users
+puts "created users!"
 
+# creates faker users
 User3 = User.create(first_name: "Papa", last_name: "Johns", username: "BigPoppaPizza", password: "123456", email: "PimpinPizza@gmail.com")
 User4 = User.create(first_name: "Bubba", last_name: "Gump", username: "BumpyGumpy", password: "123456", email: "GumpMan@gmail.com")
 User5 = User.create(first_name: "PF", last_name: "Chang", username: "PFCheezey", password: "123456", email: "Changy@gmail.com")
 User6 = User.create(first_name: "Bob", last_name: "Evans", username: "NoProbBob", password: "123456", email: "BobbyBreezy@gmail.com")
-user7 = User.create(first_name: "Roy", last_name: "Rodgers", username: "CowboyRoy", password: "123456", mail: "GetrDone@gmail.com")
+User7 = User.create(first_name: "Roy", last_name: "Rodgers", username: "CowboyRoy", password: "123456", email: "GetrDone@gmail.com")
+
+puts "created faker users!"
+
 
 # creates products
 
@@ -59,117 +63,118 @@ fruit21 = Product.create(name: "Plum", image: "https://www.worldatlas.com/r/w256
 fruit22 = Product.create(name: "Pear", image: "https://cdn.shopify.com/s/files/1/0527/2430/2014/products/TheGroceryClub-ImmaginiShopify-2022-03-10T094458.542.png?v=1646876713", price: 1.99, weight: "0.5 lb", stars: "4.5/5", description: "With its tender, fine-grained flesh, mild pineapple tang, and slightly grainy texture, the Bartlett is one of our favorite fruits. It's the ultimate summer pear. When its speckled green skin turns to yellow, this juicy pear is ripe and ready to eat. Though Bartletts can be cooked, we think their soft texture and outstanding flavor are best enjoyed when you bite into one fresh-picked." )
 fruit23 = Product.create(name: "Pomagranate", image: "https://afoodcentriclife.com/wp-content/uploads/2012/11/pomegranates.jpg", price: 5.99, weight: "1.5 lbs", stars: "5/5", description: "Bursting with sweet-tart juice and brilliant ruby color, these pomegranate arils (seeds) are already picked from the fruit and cleaned, making them the perfect garnish for festive soups, green salads or desserts. They also make a stunning finishing touch to smoked salmon platters, fruit salads or cocktails." )
 fruit24 = Product.create(name: "Raspberry", image: "https://www.meijer.com/content/dam/meijer/product/0007/14/3001/10/0007143001109_0_A1C1_1200.png", price: 4.49, weight: "1.5 lbs", stars: "5/5", description: "Raspberries are so versatile — they taste delicious, are sweet and nutritious, and dress up any meal from breakfast to a midnight snack. This pack is the ideal size for snacking throughout the day or for adding to dinner salad to share with your family.")
-fruit25 = Product.create(name: "Strawberry", image: "https://media-cldnry.s-nbcnews.com/image/upload/t_fit-1500w,f_auto,q_auto:best/streams/2014/July/140707/1D274906288130-beauty-uses-strawberries.jpg", price: 3.49, weight: "1.5 lbs", stars: "4/5", description: )
-fruit26 = Product.create(name: "Watermellon", image: "https://snaped.fns.usda.gov/sites/default/files/styles/crop_ratio_7_5/public/seasonal-produce/2018-05/watermelon.jpg?itok=6EdNOdUo", price: 9.49, weight: "14 lbs", stars: "5/5", description: )
+fruit25 = Product.create(name: "Strawberry", image: "https://media-cldnry.s-nbcnews.com/image/upload/t_fit-1500w,f_auto,q_auto:best/streams/2014/July/140707/1D274906288130-beauty-uses-strawberries.jpg", price: 3.49, weight: "1.5 lbs", stars: "4/5", description: "sgs" )
+fruit26 = Product.create(name: "Watermellon", image: "https://snaped.fns.usda.gov/sites/default/files/styles/crop_ratio_7_5/public/seasonal-produce/2018-05/watermelon.jpg?itok=6EdNOdUo", price: 9.49, weight: "14 lbs", stars: "5/5", description:"sefs" )
 fruit27 = Product.create(name: "", image: "", price: 1.99, weight: "1.5 lb", stars: "5/5", description: "All the sweetness, crunch, and knockout juiciness of the classic summertime melon. Cubed or balled, this melon was made for fruit salad. In wedges, it's ideal for young kids — no worries about the seeds. We also like to serve it at indoor parties where seed-spitting contests aren't allowed.")
 
+puts "created products!"
 
 
 # create reviews...3 for each item
 
-reviewApple1 = Review.create(product_id: fruit1.id, user_id: User1, rating: "5/5" review: "Sweetest apples I've ever tasted" )
-reviewApple2 = Review.create(product_id: fruit1.id, user_id: User3, rating: "5/5" review: "Nice and sweet" )
-reviewApple3 = Review.create(product_id: fruit1.id, user_id: User5, rating: "5/5" review: "Perfect balance of sweet and tart" )
+reviewApple1 = Review.create(product_id: fruit1.id, user_id: User1, rating: "5/5", review: "Sweetest apples I've ever tasted" )
+reviewApple2 = Review.create(product_id: fruit1.id, user_id: User3, rating: "5/5", review: "Nice and sweet" )
+reviewApple3 = Review.create(product_id: fruit1.id, user_id: User5, rating: "5/5", review: "Perfect balance of sweet and tart" )
 
-reviewAvacado1 = Review.create(product_id: fruit2.id, user_id: User3, rating: "5/5" review: "Super ripe and tasty!" )
-reviewAvacado2 = Review.create(product_id: fruit2.id, user_id: User4, rating: "5/5" review: "Love me some GUAC, GUACAMOLEEE!!" )
-reviewAvacado3 = Review.create(product_id: fruit3.id, user_id: User5, rating: "5/5" review: "I out this tuff on my toast and it's just the best thing ever!!" )
+reviewAvacado1 = Review.create(product_id: fruit2.id, user_id: User3, rating: "5/5", review: "Super ripe and tasty!" )
+reviewAvacado2 = Review.create(product_id: fruit2.id, user_id: User4, rating: "5/5", review: "Love me some GUAC, GUACAMOLEEE!!" )
+reviewAvacado3 = Review.create(product_id: fruit3.id, user_id: User5, rating: "5/5", review: "I out this tuff on my toast and it's just the best thing ever!!" )
 
-reviewBanana1 = Review.create(product_id: fruit3.id, user_id: User2, rating: "4.5/5" review: "Nice and ripe" )
-reviewBanana2 = Review.create(product_id: fruit3.id, user_id: User4, rating: "4/5" review: "Super sweet and soft" )
-reviewBanana3 = Review.create(product_id: fruit3.id, user_id: User7, rating: "5/5" review: "Perfect for making some banana bread" )
+reviewBanana1 = Review.create(product_id: fruit3.id, user_id: User2, rating: "4.5/5", review: "Nice and ripe" )
+reviewBanana2 = Review.create(product_id: fruit3.id, user_id: User4, rating: "4/5", review: "Super sweet and soft" )
+reviewBanana3 = Review.create(product_id: fruit3.id, user_id: User7, rating: "5/5", review: "Perfect for making some banana bread" )
 
-reviewBlueberry1 = Review.create(product_id: fruit4.id, user_id: User5, rating: "1/5" review: "Not ripe at all" )
-reviewBlueberry2 = Review.create(product_id: fruit4.id, user_id: User5, rating: "0/5" review: "Had ZERO taste" )
-reviewBlueberry3 = Review.create(product_id: fruit4.id, user_id: User5, rating: "1/5" review: "was not a fan tbh" )
+reviewBlueberry1 = Review.create(product_id: fruit4.id, user_id: User5, rating: "1/5", review: "Not ripe at all" )
+reviewBlueberry2 = Review.create(product_id: fruit4.id, user_id: User5, rating: "0/5", review: "Had ZERO taste" )
+reviewBlueberry3 = Review.create(product_id: fruit4.id, user_id: User5, rating: "1/5", review: "was not a fan tbh" )
 
-reviewCantaloupe1 = Review.create(product_id: fruit5.id, user_id: User5, rating: "5/5" review: "Very ripe and sweet!" )
-reviewCantaloupe2 = Review.create(product_id: fruit5.id, user_id: User2, rating: "5/5" review: "SUPER sweet :)" )
-reviewCantaloupe3 = Review.create(product_id: fruit5.id, user_id: User4, rating: "5/5" review: "Makes nice, healthy snack!" )
+reviewCantaloupe1 = Review.create(product_id: fruit5.id, user_id: User5, rating: "5/5", review: "Very ripe and sweet!" )
+reviewCantaloupe2 = Review.create(product_id: fruit5.id, user_id: User2, rating: "5/5", review: "SUPER sweet :)" )
+reviewCantaloupe3 = Review.create(product_id: fruit5.id, user_id: User4, rating: "5/5", review: "Makes nice, healthy snack!" )
 
-reviewCherry1 = Review.create(product_id: fruit6.id, user_id: User6, rating: "3/5" review: "Wasn't the best batch, but were good enough" )
-reviewCherry2 = Review.create(product_id: fruit6.id, user_id: User1, rating: "4.50" review: "Nice and sweet" )
-reviewCherry3 = Review.create(product_id: fruit6.id, user_id: User3, rating: "4/5" review: "Added these to my cocktail for some fun" )
+reviewCherry1 = Review.create(product_id: fruit6.id, user_id: User6, rating: "3/5", review: "Wasn't the best batch, but were good enough" )
+reviewCherry2 = Review.create(product_id: fruit6.id, user_id: User1, rating: "4.50", review: "Nice and sweet" )
+reviewCherry3 = Review.create(product_id: fruit6.id, user_id: User3, rating: "4/5", review: "Added these to my cocktail for some fun" )
 
-reviewCranberry1 = Review.create(product_id: fruit7.id, user_id: User7, rating: "3.5" review: "Bitter and tart but just sweet enough" )
-reviewCranberry2 = Review.create(product_id: fruit7.id, user_id: User3, rating: "4" review: "A little more tart than I'd like, but delicious nonetheless" )
-reviewCranberry3 = Review.create(product_id: fruit7.id, user_id: User1, rating: "4" review: "East to eat" )
+reviewCranberry1 = Review.create(product_id: fruit7.id, user_id: User7, rating: "3.5", review: "Bitter and tart but just sweet enough" )
+reviewCranberry2 = Review.create(product_id: fruit7.id, user_id: User3, rating: "4", review: "A little more tart than I'd like, but delicious nonetheless" )
+reviewCranberry3 = Review.create(product_id: fruit7.id, user_id: User1, rating: "4", review: "East to eat" )
 
-reviewGrape1 = Review.create(product_id: fruit8.id, user_id: User2, rating: "5/5" review: "Sweetest grapes I've ever had" )
-reviewGrape2 = Review.create(product_id: fruit8.id, user_id: User4, rating: "4.5" review: "Tastes like cotton candy!" )
-reviewGrape3 = Review.create(product_id: fruit8.id, user_id: User1, rating: "4" review: "Slightly tart, but very enjoyable" )
+reviewGrape1 = Review.create(product_id: fruit8.id, user_id: User2, rating: "5/5", review: "Sweetest grapes I've ever had" )
+reviewGrape2 = Review.create(product_id: fruit8.id, user_id: User4, rating: "4.5", review: "Tastes like cotton candy!" )
+reviewGrape3 = Review.create(product_id: fruit8.id, user_id: User1, rating: "4", review: "Slightly tart, but very enjoyable" )
 
-reviewGrapefruit1 = Review.create(product_id: fruit9.id, user_id: User5, rating: "2/5" review: "Very bitter, hard to eat" )
-reviewGrapefruit2 = Review.create(product_id: fruit9.id, user_id: User4, rating: "3/5" review: "Not too bad, but not the bet either" )
-reviewGrapefruit3 = Review.create(product_id: fruit9.id, user_id: User7, rating: "1" review: "did not enjoy these at all" )
+reviewGrapefruit1 = Review.create(product_id: fruit9.id, user_id: User5, rating: "2/5", review: "Very bitter, hard to eat" )
+reviewGrapefruit2 = Review.create(product_id: fruit9.id, user_id: User4, rating: "3/5", review: "Not too bad, but not the bet either" )
+reviewGrapefruit3 = Review.create(product_id: fruit9.id, user_id: User7, rating: "1", review: "did not enjoy these at all" )
 
-reviewGuava1 = Review.create(product_id: fruit10.id, user_id: User1, rating: "4/5" review: "Never have tried this before, but it was beter than expected" )
-reviewGuava2 = Review.create(product_id: fruit10.id, user_id: User3, rating: "4/5" review: "Has a nice sweet  taste to it" )
-reviewGuava3 = Review.create(product_id: fruit10.id, user_id: User2, rating: "4/5" review: "I don't hink I've ever seen these before but I bit the bullet and ate em...pretty good!" )
+reviewGuava1 = Review.create(product_id: fruit10.id, user_id: User1, rating: "4/5", review: "Never have tried this before, but it was beter than expected" )
+reviewGuava2 = Review.create(product_id: fruit10.id, user_id: User3, rating: "4/5", review: "Has a nice sweet  taste to it" )
+reviewGuava3 = Review.create(product_id: fruit10.id, user_id: User2, rating: "4/5", review: "I don't hink I've ever seen these before but I bit the bullet and ate em...pretty good!" )
 
-reviewHoneydew1 = Review.create(product_id: fruit11.id, user_id: User4, rating: "4/5" review: "Delicious when ripe" )
-reviewHoneydew2 = Review.create(product_id: fruit11.id, user_id: User6, rating: "5/5" review: "I really like the way this thing tastes!" )
-reviewHoneydew3 = Review.create(product_id: fruit11.id, user_id: User2, rating: "3.75/5" review: "Not the best tasting fruit, but it does the job" )
+reviewHoneydew1 = Review.create(product_id: fruit11.id, user_id: User4, rating: "4/5", review: "Delicious when ripe" )
+reviewHoneydew2 = Review.create(product_id: fruit11.id, user_id: User6, rating: "5/5", review: "I really like the way this thing tastes!" )
+reviewHoneydew3 = Review.create(product_id: fruit11.id, user_id: User2, rating: "3.75/5", review: "Not the best tasting fruit, but it does the job" )
 
-reviewJackfruit1 = Review.create(product_id: fruit12.id, user_id: User1, rating: "2.75/5" review: "Weird taste but I liked it" )
-reviewJackfruit2 = Review.create(product_id: fruit12.id, user_id: User3, rating: "1.5/5" review: "Smelled sooo bad!!" )
-reviewJackfruit3 = Review.create(product_id: fruit12.id, user_id: User5, rating: "2/5" review: "Despite it's awful smell, I enjoyed the taste of it" )
+reviewJackfruit1 = Review.create(product_id: fruit12.id, user_id: User1, rating: "2.75/5", review: "Weird taste but I liked it" )
+reviewJackfruit2 = Review.create(product_id: fruit12.id, user_id: User3, rating: "1.5/5", review: "Smelled sooo bad!!" )
+reviewJackfruit3 = Review.create(product_id: fruit12.id, user_id: User5, rating: "2/5", review: "Despite it's awful smell, I enjoyed the taste of it" )
 
-reviewKiwi1 = Review.create(product_id: fruit13.id, user_id: User7, rating: "4.75" review: "Kiwi's have such a strange texture but are very delicious" )
-reviewKiwi2 = Review.create(product_id: fruit13.id, user_id: User6, rating: "4/5" review: "So refreshing!" )
-reviewKiwi3 = Review.create(product_id: fruit13.id, user_id: User4, rating: "4.5/5" review: "Love the taste of these things!" )
+reviewKiwi1 = Review.create(product_id: fruit13.id, user_id: User7, rating: "4.75", review: "Kiwi's have such a strange texture but are very delicious" )
+reviewKiwi2 = Review.create(product_id: fruit13.id, user_id: User6, rating: "4/5", review: "So refreshing!" )
+reviewKiwi3 = Review.create(product_id: fruit13.id, user_id: User4, rating: "4.5/5", review: "Love the taste of these things!" )
 
-reviewLemon1 = Review.create(product_id: fruit14.id, user_id: User1, rating: "5/5" review: "Need my lemons for my morning cleanse" )
-reviewLemon2 = Review.create(product_id: fruit14.id, user_id: User4, rating: "5/5" review: "I use this instead of salt" )
-reviewLemon3 = Review.create(product_id: fruit14.id, user_id: User2, rating: "5/5" review: "Tastes so good with my water!" )
+reviewLemon1 = Review.create(product_id: fruit14.id, user_id: User1, rating: "5/5", review: "Need my lemons for my morning cleanse" )
+reviewLemon2 = Review.create(product_id: fruit14.id, user_id: User4, rating: "5/5", review: "I use this instead of salt" )
+reviewLemon3 = Review.create(product_id: fruit14.id, user_id: User2, rating: "5/5", review: "Tastes so good with my water!" )
 
-reviewLychee1 = Review.create(product_id: fruit15.id, user_id: User4, rating: "4.5/5" review: "Lots of work to be able to eat, but so worth it!" )
-reviewLychee2 = Review.create(product_id: fruit15.id, user_id: User5, rating: "4/5" review: "Has a slimey texture but unexpectedly sweet" )
-reviewLychee3 = Review.create(product_id: fruit15.id, user_id: User7, rating: "5/5" review: "Unlike anything I've ever tasted before" )
+reviewLychee1 = Review.create(product_id: fruit15.id, user_id: User4, rating: "4.5/5", review: "Lots of work to be able to eat, but so worth it!" )
+reviewLychee2 = Review.create(product_id: fruit15.id, user_id: User5, rating: "4/5", review: "Has a slimey texture but unexpectedly sweet" )
+reviewLychee3 = Review.create(product_id: fruit15.id, user_id: User7, rating: "5/5", review: "Unlike anything I've ever tasted before" )
 
-reviewMango1 = Review.create(product_id: fruit16.id, user_id: User3, rating: "5/5" review: "Love me some Mango!" )
-reviewMango2 = Review.create(product_id: fruit16.id, user_id: User7, rating: "5/5" review: "Brest fruit evaaaa!" )
-reviewMango3 = Review.create(product_id: fruit16.id, user_id: User5, rating: "5/5" review: "Can't enough of these bad boys!" )
+reviewMango1 = Review.create(product_id: fruit16.id, user_id: User3, rating: "5/5", review: "Love me some Mango!" )
+reviewMango2 = Review.create(product_id: fruit16.id, user_id: User7, rating: "5/5", review: "Brest fruit evaaaa!" )
+reviewMango3 = Review.create(product_id: fruit16.id, user_id: User5, rating: "5/5", review: "Can't enough of these bad boys!" )
 
-reviewOrange1 = Review.create(product_id: fruit17.id, user_id: User2, rating: "4/5" review: "I could eat these all day!" )
-reviewOrange2 = Review.create(product_id: fruit17.id, user_id: User4, rating: "4/5" review: "These are one my most favorite fruits" )
-reviewOrange3 = Review.create(product_id: fruit17.id, user_id: User6, rating: "4/5" review: "This store has the best tasting oranges " )
+reviewOrange1 = Review.create(product_id: fruit17.id, user_id: User2, rating: "4/5", review: "I could eat these all day!" )
+reviewOrange2 = Review.create(product_id: fruit17.id, user_id: User4, rating: "4/5", review: "These are one my most favorite fruits" )
+reviewOrange3 = Review.create(product_id: fruit17.id, user_id: User6, rating: "4/5", review: "This store has the best tasting oranges " )
 
-reviewPapaya1 = Review.create(product_id: fruit18.id, user_id: User5, rating: "1.50/5" review: "BITTER taste!" )
-reviewPapaya2 = Review.create(product_id: fruit18.id, user_id: User5, rating: "1/5" review: "Nasty!!" )
-reviewPapaya3 = Review.create(product_id: fruit18.id, user_id: User5, rating: "1/5" review: "Too bitter for my liking!!" )
+reviewPapaya1 = Review.create(product_id: fruit18.id, user_id: User5, rating: "1.50/5", review: "BITTER taste!" )
+reviewPapaya2 = Review.create(product_id: fruit18.id, user_id: User5, rating: "1/5", review: "Nasty!!" )
+reviewPapaya3 = Review.create(product_id: fruit18.id, user_id: User5, rating: "1/5", review: "Too bitter for my liking!!" )
 
-reviewPassionFruit1 = Review.create(product_id: fruit19.id, user_id: User2, rating: "4.5/5" review: "Nice exotic fruit, which you normally can't find here" )
-reviewPassionFruit2 = Review.create(product_id: fruit19.id, user_id: User5, rating: "5/5" review: "One of my favorite fruits of all time!" )
-reviewPassionFruit3 = Review.create(product_id: fruit19.id, user_id: User7, rating: "4/5" review: "Delisicoso!" )
+reviewPassionFruit1 = Review.create(product_id: fruit19.id, user_id: User2, rating: "4.5/5", review: "Nice exotic fruit, which you normally can't find here" )
+reviewPassionFruit2 = Review.create(product_id: fruit19.id, user_id: User5, rating: "5/5", review: "One of my favorite fruits of all time!" )
+reviewPassionFruit3 = Review.create(product_id: fruit19.id, user_id: User7, rating: "4/5", review: "Delisicoso!" )
 
-reviewPeach1 = Review.create(product_id: fruit20.id, user_id: User1, rating: "2/5" review: "A good peach is hard to come by" )
-reviewPeach2 = Review.create(product_id: fruit20.id, user_id: User5, rating: "4/5" review: "Robust flavor" )
-reviewPeach3 = Review.create(product_id: fruit20.id, user_id: User7, rating: "3/5" review: "Tasted fresh but wasn't a fan of the texture" )
+reviewPeach1 = Review.create(product_id: fruit20.id, user_id: User1, rating: "2/5", review: "A good peach is hard to come by" )
+reviewPeach2 = Review.create(product_id: fruit20.id, user_id: User5, rating: "4/5", review: "Robust flavor" )
+reviewPeach3 = Review.create(product_id: fruit20.id, user_id: User7, rating: "3/5", review: "Tasted fresh but wasn't a fan of the texture" )
 
-reviewPlum1 = Review.create(product_id: fruit21.id, user_id: User4, rating: "4/5" review: "Super juicy!" )
-reviewPlum2 = Review.create(product_id: fruit21.id, user_id: User6, rating: "4.5/5" review: "I really enjoy eating these as a snack!" )
-reviewPlum3 = Review.create(product_id: fruit21.id, user_id: User3, rating: "5/5" review: "Easy to carry and easy to eat without the mess" )
+reviewPlum1 = Review.create(product_id: fruit21.id, user_id: User4, rating: "4/5", review: "Super juicy!" )
+reviewPlum2 = Review.create(product_id: fruit21.id, user_id: User6, rating: "4.5/5", review: "I really enjoy eating these as a snack!" )
+reviewPlum3 = Review.create(product_id: fruit21.id, user_id: User3, rating: "5/5", review: "Easy to carry and easy to eat without the mess" )
 
-reviewPear1 = Review.create(product_id: fruit22.id, user_id: User7, rating: "4.5/5" review: "Lovely cousin of the apples" )
-reviewPear2 = Review.create(product_id: fruit22.id, user_id: User1, rating: "4.5/5" review: "Takes a while to used to the texture, but these are soo good!!" )
-reviewPear3 = Review.create(product_id: fruit22.id, user_id: User4, rating: "5" review: "Probz one of my favorite fruits" )
+reviewPear1 = Review.create(product_id: fruit22.id, user_id: User7, rating: "4.5/5", review: "Lovely cousin of the apples" )
+reviewPear2 = Review.create(product_id: fruit22.id, user_id: User1, rating: "4.5/5", review: "Takes a while to used to the texture, but these are soo good!!" )
+reviewPear3 = Review.create(product_id: fruit22.id, user_id: User4, rating: "5", review: "Probz one of my favorite fruits" )
 
-reviewPomagranate1 = Review.create(product_id: fruit23.id, user_id: User5, rating: "5/5" review: "Sooooo delicious!" )
-reviewPomagranate2 = Review.create(product_id: fruit23.id, user_id: User2, rating: "5/5" review: "Super sweet and can easily add to anything!")
-reviewPomagranate3 = Review.create(product_id: fruit23.id, user_id: User6, rating: "5/5" review: "You literally cannot go wrong here!" )
+reviewPomagranate1 = Review.create(product_id: fruit23.id, user_id: User5, rating: "5/5", review: "Sooooo delicious!" )
+reviewPomagranate2 = Review.create(product_id: fruit23.id, user_id: User2, rating: "5/5", review: "Super sweet and can easily add to anything!")
+reviewPomagranate3 = Review.create(product_id: fruit23.id, user_id: User6, rating: "5/5", review: "You literally cannot go wrong here!" )
 
-reviewRaspberry1 = Review.create(product_id: fruit24.id, user_id: User4, rating: "4/5" review: "So fun to eat" )
-reviewRaspberry2 = Review.create(product_id: fruit24.id, user_id: User7, rating: "5/5" review: "Best raspberries I've ever had in my life!" )
-reviewRaspberry3 = Review.create(product_id: fruit24.id, user_id: User2, rating: "4/5" review: "Really enjoyed eating these" )
+reviewRaspberry1 = Review.create(product_id: fruit24.id, user_id: User4, rating: "4/5", review: "So fun to eat" )
+reviewRaspberry2 = Review.create(product_id: fruit24.id, user_id: User7, rating: "5/5", review: "Best raspberries I've ever had in my life!" )
+reviewRaspberry3 = Review.create(product_id: fruit24.id, user_id: User2, rating: "4/5", review: "Really enjoyed eating these" )
 
-reviewStrawberry1 = Review.create(product_id: fruit25.id, user_id: User1, rating: "5/5" review: "Deishhhh" )
-reviewStrawberry2 = Review.create(product_id: fruit25.id, user_id: User3, rating: "3/5" review: "Some of the strawberries weren't ripe" )
-reviewStrawberry3 = Review.create(product_id: fruit25.id, user_id: User6, rating: "3.5/5" review: "Gets the job done" )
+reviewStrawberry1 = Review.create(product_id: fruit25.id, user_id: User1, rating: "5/5", review: "Deishhhh" )
+reviewStrawberry2 = Review.create(product_id: fruit25.id, user_id: User3, rating: "3/5", review: "Some of the strawberries weren't ripe" )
+reviewStrawberry3 = Review.create(product_id: fruit25.id, user_id: User6, rating: "3.5/5", review: "Gets the job done" )
 
-reviewWatermelon1 = Review.create(product_id: fruit1.id, user_id: User4, rating: "5/5" review: "Summatime fineeeeee" )
-reviewWatermelon2 = Review.create(product_id: fruit1.id, user_id: User3, rating: "5/5" review: "Find me at the cookout!" )
-reviewWatermelon3 = Review.create(product_id: fruit1.id, user_id: User2, rating: "5/5" review: "What's not to like about a nice, sweet, juicy Watermellon?" )
+reviewWatermelon1 = Review.create(product_id: fruit1.id, user_id: User4, rating: "5/5", review: "Summatime fineeeeee" )
+reviewWatermelon2 = Review.create(product_id: fruit1.id, user_id: User3, rating: "5/5", review: "Find me at the cookout!" )
+reviewWatermelon3 = Review.create(product_id: fruit1.id, user_id: User2, rating: "5/5", review: "What's not to like about a nice, sweet, juicy Watermellon?" )
 
 
 
@@ -178,90 +183,82 @@ reviewAspargus1 = Review.create(product_id: veg1.id, user_id: User2, rating: "4.
 reviewAspargus2 = Review.create(product_id: veg1.id, user_id: User4, rating: "3/5", review: "I may have gotten a bad batch")
 reviewAspargus3 = Review.create(product_id: veg1.id, user_id: User6, rating: "3/5", review: "They taste so good but they make my urine smell REALLY bad!!")
 
-reviewArtichoke = Review.create(product_id: veg2.id, user_id: User3, rating: "4.5/5" review: "Bought these as pizza topings and they were sooo good" )
-reviewArtichoke2 = Review.create(product_id: veg2.id, user_id: User4, rating: "4/5" review: "They taste soo good" )
-reviewAtrichoke3 = Review.create(product_id: veg2.id, user_id: user7, rating: "5/5" review: "Best artichokes everrr")
+reviewArtichoke = Review.create(product_id: veg2.id, user_id: User3, rating: "4.5/5", review: "Bought these as pizza topings and they were sooo good" )
+reviewArtichoke2 = Review.create(product_id: veg2.id, user_id: User4, rating: "4/5", review: "They taste soo good" )
+reviewArtichoke3 = Review.create(product_id: veg2.id, user_id: User7, rating: "5/5", review: "Best artichokes everrr")
 
-reviewBroccoli1 = Review.create(product_id: veg3.id, user_id: User3, rating: "3.75" review: "Love me some little green trees" )
-reviewBroccoli2 = Review.create(product_id: veg3.id, user_id: User5, rating: "4/5" review: "They taste so good!" )
-reviewBroccoli3 = Review.create(product_id: veg3.id, user_id: User7, rating: "4/5" review: "Broccoli with cheese make the best combo!" )
+reviewBroccoli1 = Review.create(product_id: veg3.id, user_id: User3, rating: "3.75", review: "Love me some little green trees" )
+reviewBroccoli2 = Review.create(product_id: veg3.id, user_id: User5, rating: "4/5", review: "They taste so good!" )
+reviewBroccoli3 = Review.create(product_id: veg3.id, user_id: User7, rating: "4/5", review: "Broccoli with cheese make the best combo!" )
 
-reviewBrusselsSprouts1 =  Review.create(product_id: veg4.id, user_id: User2, rating: "1.5/5" review: "These remind me of baby cabbage" )
-reviewBrusselsSprouts2 = Review.create(product_id: veg4.id, user_id: User4, rating: "2/5" review: "These are decent IF cooked right!" )
-reviewBrusselsSprouts3 = Review.create(product_id: veg4.id, user_id: User7, rating: "0" review: "Taste like feet...disgusting!" )
+reviewBrusselsSprouts1 =  Review.create(product_id: veg4.id, user_id: User2, rating: "1.5/5", review: "These remind me of baby cabbage" )
+reviewBrusselsSprouts2 = Review.create(product_id: veg4.id, user_id: User4, rating: "2/5", review: "These are decent IF cooked right!" )
+reviewBrusselsSprouts3 = Review.create(product_id: veg4.id, user_id: User7, rating: "0", review: "Taste like feet...disgusting!" )
 
-reviewCabbage1 = Review.create(product_id: veg5.id, user_id: User5, rating: "4.5/5" review: "fabbage!" )
-reviewCabbage2 = Review.create(product_id: veg5.id, user_id: User1, rating: "4/5" review: "Love me some slawwww!" )
-reviewCabbage3 = Review.create(product_id: veg5.id, user_id: User2, rating: "5/5" review: "Nice and Crispy!" )
+reviewCabbage1 = Review.create(product_id: veg5.id, user_id: User5, rating: "4.5/5", review: "fabbage!" )
+reviewCabbage2 = Review.create(product_id: veg5.id, user_id: User1, rating: "4/5", review: "Love me some slawwww!" )
+reviewCabbage3 = Review.create(product_id: veg5.id, user_id: User2, rating: "5/5", review: "Nice and Crispy!" )
 
-reviewCarrot1 = Review.create(product_id: veg6.id, user_id: User2, rating: "4.5/5" review: "Fresh and Crispy!" )
-reviewCarrot2 = Review.create(product_id: veg6.id, user_id: User5, rating: "5/5" review: "Good for meh eyes" )
-reviewCarrot3 = Review.create(product_id: veg6.id, user_id: user7, rating: "5/5" review: "Great addition to my salads" )
+reviewCarrot1 = Review.create(product_id: veg6.id, user_id: User2, rating: "4.5/5", review: "Fresh and Crispy!" )
+reviewCarrot2 = Review.create(product_id: veg6.id, user_id: User5, rating: "5/5", review: "Good for meh eyes" )
+reviewCarrot3 = Review.create(product_id: veg6.id, user_id: User7, rating: "5/5", review: "Great addition to my salads" )
 
-reviewCelery1 = Review.create(product_id: veg7.id, user_id: User6, rating: "4.5/5" review: "Celery and ranch ftw!" )
-reviewCelery2 = Review.create(product_id: veg7.id, user_id: User7, rating: "4/5" review: "They taste soo good with peanut butter" )
-reviewCelery3 = Review.create(product_id: veg7.id, user_id: User2, rating: "5/5" review: "I dip these in my hummus and it's super healthy!" )
+reviewCelery1 = Review.create(product_id: veg7.id, user_id: User6, rating: "4.5/5", review: "Celery and ranch ftw!" )
+reviewCelery2 = Review.create(product_id: veg7.id, user_id: User7, rating: "4/5", review: "They taste soo good with peanut butter" )
+reviewCelery3 = Review.create(product_id: veg7.id, user_id: User2, rating: "5/5", review: "I dip these in my hummus and it's super healthy!" )
 
-reviewCorn1 = Review.create(product_id: veg8.id, user_id: User5, rating: "4.5/5" review: "A must have in the summer!" )
-reviewCorn2 = Review.create(product_id: veg8.id, user_id: User3, rating: "4/5" review: "I like mine boiled as opposed to grilled" )
-reviewCorn3 = Review.create(product_id: veg8.id, user_id: User1, rating: "5/5" review: "ELOTE BAYBEEEEEE")
+reviewCorn1 = Review.create(product_id: veg8.id, user_id: User5, rating: "4.5/5", review: "A must have in the summer!" )
+reviewCorn2 = Review.create(product_id: veg8.id, user_id: User3, rating: "4/5", review: "I like mine boiled as opposed to grilled" )
+reviewCorn3 = Review.create(product_id: veg8.id, user_id: User1, rating: "5/5", review: "ELOTE BAYBEEEEEE")
 
-reviewCucumber1 = Review.create(product_id: veg9.id, user_id: User7, rating: "4.5/5" review: "Juicy and crispy!" )
-reviewCucumber2 = Review.create(product_id: veg9.id, user_id: User4, rating: "4.5/5" review: "Perfect for a nice and simple salad!" )
-reviewCucumber3 = Review.create(product_id: veg9.id, user_id: User2, rating: "5/5" review: "We use these to make fresh pickles in the fall...soo yummy!" )
+reviewCucumber1 = Review.create(product_id: veg9.id, user_id: User7, rating: "4.5/5", review: "Juicy and crispy!" )
+reviewCucumber2 = Review.create(product_id: veg9.id, user_id: User4, rating: "4.5/5", review: "Perfect for a nice and simple salad!" )
+reviewCucumber3 = Review.create(product_id: veg9.id, user_id: User2, rating: "5/5", review: "We use these to make fresh pickles in the fall...soo yummy!" )
 
-reviewEggplant1 = Review.create(product_id: veg10.id, user_id: User3, rating: "2.5/5" review: "Weren't the best" )
-reviewEggplant2 = Review.create(product_id: veg10.id, user_id: User5, rating: "3/5" review: "Could've been more ripe" )
-reviewEggplant3 = Review.create(product_id: veg10.id, user_id: User7, rating: "2.75/5" review: "Did someone say eggplant parmmmm?!" )
+reviewEggplant1 = Review.create(product_id: veg10.id, user_id: User3, rating: "2.5/5", review: "Weren't the best" )
+reviewEggplant2 = Review.create(product_id: veg10.id, user_id: User5, rating: "3/5", review: "Could've been more ripe" )
+reviewEggplant3 = Review.create(product_id: veg10.id, user_id: User7, rating: "2.75/5", review: "Did someone say eggplant parmmmm?!" )
 
-reviewGarlic1 = Review.create(product_id: veg11.id, user_id: User1, rating: "5/5" review: "No such thing too much Garlic!!" )
-reviewGarlic2 = Review.create(product_id: veg11.id, user_id: User2, rating: "5/5" review: "Garlicky pasta is the way to go!" )
-reviewGarlic3 = Review.create(product_id: veg11.id, user_id: User3, rating: "5/5" review: "Used these to make some fresh garlic bread...game changer" )
+reviewGarlic1 = Review.create(product_id: veg11.id, user_id: User1, rating: "5/5", review: "No such thing too much Garlic!!" )
+reviewGarlic2 = Review.create(product_id: veg11.id, user_id: User2, rating: "5/5", review: "Garlicky pasta is the way to go!" )
+reviewGarlic3 = Review.create(product_id: veg11.id, user_id: User3, rating: "5/5", review: "Used these to make some fresh garlic bread...game changer" )
 
-reviewJalepeno1 = Review.create(product_id: veg12.id, user_id: User5, rating: "4.75/5" review: "Bought these to make some nice spicy salsa!" )
-reviewJalepeno2 = Review.create(product_id: veg12.id, user_id: User6, rating: "5/5" review: "These taste soooo amazing!" )
-reviewJalepeno3 = Review.create(product_id: veg12.id, user_id: User7, rating: "5/5" review: "Were nice and spiceyyyy!!" )
+reviewJalepeno1 = Review.create(product_id: veg12.id, user_id: User5, rating: "4.75/5", review: "Bought these to make some nice spicy salsa!" )
+reviewJalepeno2 = Review.create(product_id: veg12.id, user_id: User6, rating: "5/5", review: "These taste soooo amazing!" )
+reviewJalepeno3 = Review.create(product_id: veg12.id, user_id: User7, rating: "5/5", review: "Were nice and spiceyyyy!!" )
 
-reviewLettuce1 = Review.create(product_id: veg13.id, user_id: User2, rating: "4.5/5" review: "Can't have a salad without lettuce!" )
-reviewLettuce2 = Review.create(product_id: veg13.id, user_id: User4, rating: "4/5" review: "Fresh" )
-reviewLettuce3 = Review.create(product_id: veg13.id, user_id: User6, rating: "5/5" review: "Made some lettuce wraps with these and turned out wonderful" )
+reviewLettuce1 = Review.create(product_id: veg13.id, user_id: User2, rating: "4.5/5", review: "Can't have a salad without lettuce!" )
+reviewLettuce2 = Review.create(product_id: veg13.id, user_id: User4, rating: "4/5", review: "Fresh" )
+reviewLettuce3 = Review.create(product_id: veg13.id, user_id: User6, rating: "5/5", review: "Made some lettuce wraps with these and turned out wonderful" )
 
-reviewMushroom1 = Review.create(product_id: veg14.id, user_id: User6, rating: "4.5/5" review: "Mushroom alfredo is my faveeee!!" )
-reviewMushroom2 = Review.create(product_id: veg14.id, user_id: User3, rating: "4/5" review: "Mushroom risotto is a staple in our house!" )
-reviewMushroom3 = Review.create(product_id: veg14.id, user_id: User1, rating: "5/5" review: "Added these to our ramen and is completely changed the game!" )
+reviewMushroom1 = Review.create(product_id: veg14.id, user_id: User6, rating: "4.5/5", review: "Mushroom alfredo is my faveeee!!" )
+reviewMushroom2 = Review.create(product_id: veg14.id, user_id: User3, rating: "4/5", review: "Mushroom risotto is a staple in our house!" )
+reviewMushroom3 = Review.create(product_id: veg14.id, user_id: User1, rating: "5/5", review: "Added these to our ramen and is completely changed the game!" )
 
-reviewOnion1 = Review.create(product_id: veg15.id, user_id: User2, rating: "5/5" review: "Can use these in just about every dish!" )
-reviewOnion2 = Review.create(product_id: veg15.id, user_id: User4, rating: "5/5" review: "I love how versatile onions are!" )
-reviewOnion3 = Review.create(product_id: veg15.id, user_id: User6, rating: "5/5" review: "Caramelized onions are just something different!" )
+reviewOnion1 = Review.create(product_id: veg15.id, user_id: User2, rating: "5/5", review: "Can use these in just about every dish!" )
+reviewOnion2 = Review.create(product_id: veg15.id, user_id: User4, rating: "5/5", review: "I love how versatile onions are!" )
+reviewOnion3 = Review.create(product_id: veg15.id, user_id: User6, rating: "5/5", review: "Caramelized onions are just something different!" )
 
-reviewPotato1 = Review.create(product_id: veg16.id, user_id: User1, rating: "5/5" review: "Fresh fries are the best fries!" )
-reviewPotato2 = Review.create(product_id: veg16.id, user_id: User2, rating: "4/5" review: "Made homefries the other day and they turned out awesome!" )
-reviewPotato3 = Review.create(product_id: veg16.id, user_id: User5, rating: "4.5" review: "Anyone say mashed pataterrr?" )
+reviewPotato1 = Review.create(product_id: veg16.id, user_id: User1, rating: "5/5", review: "Fresh fries are the best fries!" )
+reviewPotato2 = Review.create(product_id: veg16.id, user_id: User2, rating: "4/5", review: "Made homefries the other day and they turned out awesome!" )
+reviewPotato3 = Review.create(product_id: veg16.id, user_id: User5, rating: "4.5", review: "Anyone say mashed pataterrr?" )
 
-reviewRainbowBellPepper1 = Review.create(product_id: veg17.id, user_id: User5, rating: "5/5" review: "Stuffed peppers are my favorite!" )
-reviewRainbowBellPepper2 = Review.create(product_id: veg17.id, user_id: User1, rating: "5/5" review: "Love these for my famous fajitas!" )
-reviewRainbowBellPepper3 = Review.create(product_id: veg17.id, user_id: User2, rating: "5/5" review: "These are super crsipy and sweet..such a nice addition to anything really!" )
+reviewRainbowBellPepper1 = Review.create(product_id: veg17.id, user_id: User5, rating: "5/5", review: "Stuffed peppers are my favorite!" )
+reviewRainbowBellPepper2 = Review.create(product_id: veg17.id, user_id: User1, rating: "5/5", review: "Love these for my famous fajitas!" )
+reviewRainbowBellPepper3 = Review.create(product_id: veg17.id, user_id: User2, rating: "5/5", review: "These are super crsipy and sweet..such a nice addition to anything really!" )
 
-reviewSquash1 = Review.create(product_id: veg18.id, user_id: User5, rating: "1/5" review: "No texture to this mushy vegetable!!" )
-reviewSquash2 = Review.create(product_id: veg18.id, user_id: User5, rating: "0/5" review: "Disgusting...how the hell do people eat this?!" )
-reviewSquash3 = Review.create(product_id: veg18.id, user_id: User5, rating: "1.5" review: "No taste whatsoever" )
+reviewSquash1 = Review.create(product_id: veg18.id, user_id: User5, rating: "1/5", review: "No texture to this mushy vegetable!!" )
+reviewSquash2 = Review.create(product_id: veg18.id, user_id: User5, rating: "0/5", review: "Disgusting...how the hell do people eat this?!" )
+reviewSquash3 = Review.create(product_id: veg18.id, user_id: User5, rating: "1.5", review: "No taste whatsoever" )
 
-reviewSpinach1 = Review.create(product_id: veg19.id, user_id: User6, rating: "5/5" review: "Such a great addition to my salads" )
-reviewSpinach2 = Review.create(product_id: veg19.id, user_id: User3, rating: "5/5" review: "Spinach pesto is my sh*ttt" )
-reviewSpinach3 = Review.create(product_id: veg19.id, user_id: User7, rating: "5/5" review: "Use these for my morning smoothies and I love them" )
+reviewSpinach1 = Review.create(product_id: veg19.id, user_id: User6, rating: "5/5", review: "Such a great addition to my salads" )
+reviewSpinach2 = Review.create(product_id: veg19.id, user_id: User3, rating: "5/5", review: "Spinach pesto is my sh*ttt" )
+reviewSpinach3 = Review.create(product_id: veg19.id, user_id: User7, rating: "5/5", review: "Use these for my morning smoothies and I love them" )
 
-reviewTomato1 = Review.create(product_id: veg20.id, user_id: User1, rating: "5/5" review: "Cant make arribiatta sauce without tomatoes!" )
-reviewTomato2 = Review.create(product_id: veg20.id, user_id: User4, rating: "5/5" review: "They taste soo good and sweet!" )
-reviewTomato3 = Review.create(product_id: veg20.id, user_id: User2, rating: "5/5" review: "Best tamaterrs everr" )
+reviewTomato1 = Review.create(product_id: veg20.id, user_id: User1, rating: "5/5", review: "Cant make arribiatta sauce without tomatoes!" )
+reviewTomato2 = Review.create(product_id: veg20.id, user_id: User4, rating: "5/5", review: "They taste soo good and sweet!" )
+reviewTomato3 = Review.create(product_id: veg20.id, user_id: User2, rating: "5/5", review: "Best tamaterrs everr" )
 
-
-
-
-
-
-
-
-
-
+puts "created reviews!"
 
 puts '✅ Done seeding!'
