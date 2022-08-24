@@ -1,7 +1,22 @@
 import React from "react";
-
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
 function ProductDetails() {
+
+  const [vegetable, setVegetable] = useState([])
+  let params = useParams();
+
+
+  useEffect(() => {
+    fetch(`/products/${params.productId}`)
+      .then(res => res.json())
+      .then(setVegetable)
+  }, [])
+  console.log(vegetable)
+
+
+
   return (
     <div style={{
       display: "flex",
@@ -17,7 +32,9 @@ function ProductDetails() {
           background: "blue",
           flexDirection: 'column'
         }}>
-          image
+          <img styles={{ maxHeight: "400px", maxWidth: "400px", position: "relative" }} src={`${vegetable.image}`} />
+
+
         </div>
         <div style={{
           flexDirection: "column",
@@ -36,7 +53,7 @@ function ProductDetails() {
             background: "purple", display: 'flex',
             flex: 1,
           }}>
-            description
+            {vegetable.description}
           </div>
         </div>
       </div>
@@ -44,7 +61,7 @@ function ProductDetails() {
         background: "orange", display: "flex",
         flexDirection: "row"
       }}>
-        reviews
+        {vegetable.review}
       </div>
     </div>
 
