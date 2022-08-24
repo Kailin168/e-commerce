@@ -1,24 +1,16 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-
 # creates Users
 
-User1 = User.create(first_name: "Ronald", last_name: "McDonald", username: "MickeyDeez", email: "MickeyDeez2003@gmail.com")
-User2 = User.create(first_name: "Johnny", last_name: "Rocket", username: "GottaBlast", email: "JohnnyToDaMoon@gmail.com")
+User1 = User.create(first_name: "Ronald", last_name: "McDonald", username: "MickeyDeez", password: "123456", email: "MickeyDeez2003@gmail.com")
+User2 = User.create(first_name: "Johnny", last_name: "Rocket", username: "GottaBlast", password: "456789", email: "JohnnyToDaMoon@gmail.com")
 
 puts "created users!"
 
 # creates faker users
-User3 = User.create(first_name: "Papa", last_name: "Johns", username: "BigPoppaPizza", email: "PimpinPizza@gmail.com")
-User4 = User.create(first_name: "Bubba", last_name: "Gump", username: "BumpyGumpy", email: "GumpMan@gmail.com")
-User5 = User.create(first_name: "PF", last_name: "Chang", username: "PFCheezey", email: "Changy@gmail.com")
-User6 = User.create(first_name: "Bob", last_name: "Evans", username: "NoProbBob", email: "BobbyBreezy@gmail.com")
-User7 = User.create(first_name: "Roy", last_name: "Rodgers", username: "CowboyRoy", email: "GetrDone@gmail.com")
+User3 = User.create(first_name: "Papa", last_name: "Johns", username: "BigPoppaPizza", password: "123456", email: "PimpinPizza@gmail.com")
+User4 = User.create(first_name: "Bubba", last_name: "Gump", username: "BumpyGumpy", password: "123456", email: "GumpMan@gmail.com")
+User5 = User.create(first_name: "PF", last_name: "Chang", username: "PFCheezey", password: "123456", email: "Changy@gmail.com")
+User6 = User.create(first_name: "Bob", last_name: "Evans", username: "NoProbBob", password: "123456", email: "BobbyBreezy@gmail.com")
+User7 = User.create(first_name: "Roy", last_name: "Rodgers", username: "CowboyRoy", password: "123456", email: "GetrDone@gmail.com")
 
 puts "created faker users!"
 
