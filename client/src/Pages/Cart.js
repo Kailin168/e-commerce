@@ -2,11 +2,19 @@ import ShoppingCart from "./ShoppingCart";
 import CheckOutButton from "./CheckOutButton";
 import ItemTotal from "./ItemTotal";
 import AuthContext, { isLoggedIn } from "../lib/AuthContext";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 
 
 function Cart() {
   const auth = useContext(AuthContext);
+
+  useEffect(() => {
+    fetch("/cart")
+      .then(res => res.json())
+      .then(console.log)
+  }, [])
+
+
 
   return (
     <div style={{

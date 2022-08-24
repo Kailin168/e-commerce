@@ -13,5 +13,10 @@ Rails.application.routes.draw do
 
   post '/create_user', to: 'users#create'
 
+  post '/create_cart', to: 'carts#create'
+
+  get '/cart', to: 'carts#show'
+
+
   get "*path", to: "fallback#index", constraints: ->(req) { !req.xhr? && req.format.html? }
 end

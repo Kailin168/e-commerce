@@ -1,10 +1,18 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import Button from '@mui/material/Button';
+import AddBoxIcon from '@mui/icons-material/AddBox';
+import RemoveCircleIcon from '@mui/icons-material/RemoveCircle';
+import AuthContext from "../lib/AuthContext";
+import { useContext } from "react";
+
 
 function ProductDetails() {
 
-  const [vegetable, setVegetable] = useState([])
+  const [quantityCount, setQuantityCount] = useState(1);
+  const [vegetable, setVegetable] = useState([]);
+  const auth = useContext(AuthContext);
   let params = useParams();
 
 
@@ -14,6 +22,19 @@ function ProductDetails() {
       .then(setVegetable)
   }, [])
   console.log(vegetable)
+
+
+  const handleAddToCart =()=>{
+    fetch('/create_cart', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ 
+        product_id: params.productId,
+        quantity: quantityCount,
+      }),
+    })}
 
 
 
@@ -32,7 +53,7 @@ function ProductDetails() {
           background: "blue",
           flexDirection: 'column'
         }}>
-          <img styles={{ maxHeight: "400px", maxWidth: "400px", position: "relative" }} src={`${vegetable.image}`} />
+          <img styles={{ height: "50%", width: "50%"}} src={`${vegetable.image}`} />
 
 
         </div>
@@ -47,7 +68,23 @@ function ProductDetails() {
             display: 'flex',
             flex: 5,
           }}>
-            cart
+            {vegetable.name}
+            <br></br>
+            {vegetable.weight}
+            <br></br>
+            {vegetable.price}
+            <br></br>
+                <RemoveCircleIcon fontSize="small" onClick={() => {
+                  setQuantityCount(Math.max(quantityCount - 1, 0));
+                }}/>
+              <p style={{
+                margin: "0 5px 0 5px",
+                fontSize: "25px"
+              }}>{quantityCount}</p>
+                <AddBoxIcon fontSize="small" onClick={() => {
+                  setQuantityCount(quantityCount + 1);
+                }} />
+            <Button size="small" onClick={handleAddToCart}>Add to Cart</Button>
           </div>
           <div style={{
             background: "purple", display: 'flex',

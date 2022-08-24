@@ -10,10 +10,14 @@ import Typography from '@mui/material/Typography';
 import ButtonGroup from '@mui/material/ButtonGroup';
 import AddBoxIcon from '@mui/icons-material/AddBox';
 import RemoveCircleIcon from '@mui/icons-material/RemoveCircle';
+import AuthContext from "../lib/AuthContext";
+import { useContext } from "react";
+
 
 export default function ItemCard({item}) {
 
   const [quantityCount, setQuantityCount] = useState(1);
+  const auth = useContext(AuthContext);
 
   let navigate = useNavigate();
 
@@ -21,6 +25,21 @@ export default function ItemCard({item}) {
     let path =  `/productDetails/${item.id}`;
     navigate(path);
   }
+
+
+  const handleAddToCart =()=>{
+    fetch('/create_cart', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ 
+        user_id: auth.user.id,
+        product_id: item.id,
+        quantity: quantityCount,
+      }),
+    })}
+
   
   return (
     <Card sx={{ maxWidth: 345 }}>
@@ -64,7 +83,7 @@ export default function ItemCard({item}) {
             <AddBoxIcon fontSize="small" />
           </Button>
         </ButtonGroup>
-        <Button size="small" >Add to Cart</Button>
+        <Button size="small" onClick={handleAddToCart}>Add to Cart</Button>
         <Button size="small" onClick={showProductDetails}>Learn More</Button>
       </CardActions>
     </Card>
