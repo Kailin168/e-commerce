@@ -4,8 +4,6 @@ class ReviewsController < ApplicationController
 #show all reviews
 def index
     render json: Review.all
-
-
 end
 
 #

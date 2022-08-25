@@ -1,8 +1,18 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import Box from '@mui/material/Box';
+import InputAdornment from '@mui/material/InputAdornment';
+import TextField from '@mui/material/TextField';
+import AccountCircle from '@mui/icons-material/AccountCircle';
+import PasswordIcon from '@mui/icons-material/Password';
+import EmailIcon from '@mui/icons-material/Email';
+import BadgeIcon from '@mui/icons-material/Badge';
+import Button from '@mui/material/Button';
 
 
-function SignIn({user, setUser}) {
+function SignIn({ user, setUser }) {
+  let navigate = useNavigate();
   const [username, setUsername] = useState("")
   const [password, setPassword] = useState("")
   const [errorMessage, setErrorMessage] = useState("")
@@ -58,12 +68,14 @@ function SignIn({user, setUser}) {
             console.log(data)
             setErrorMessage('')
             setUser(data)
+            navigate('/');
           })
       } else {
         res.json()
         .then(({error}) => setErrorMessage(error))
       }
     })
+    e.target.reset();
   }
 
   const handleAccountSubmit = (e) => {
@@ -91,106 +103,163 @@ function SignIn({user, setUser}) {
             console.log(data)
             setErrorMessage('')
             setUser(data)
+            navigate('/');
           })
       } else {
         res.json()
         .then(({error}) => setErrorMessage(error))
       }
     })
+    e.target.reset();
   }
 
-  if (user.id) {
-    return (
-      <div>
-      Already logged in!
-      </div>
-    )
-  }
+  // if (user.id) {
+  //   return (
+  //     <div>
+  //       Already logged in!
+  //     </div>
+  //   )
+  // }
 
 
   return (
-    <div style={{ textAlign: "center", padding: "20px", background: "#98c1d9", borderRadius: "8px", margin: "0 auto", width: "50%" }}>
+    <div style={{ textAlign: "center", padding: "20px", margin: "0 auto", width: "50%" }}>
       <div>
-        SIGN IN
+        Sign In:
         <form onSubmit={handleSubmit}>
-          <div style={{ margin: "10px 0" }}>
-            <label>Username:</label>
-            <input
+          <Box sx={{ '& > :not(style)': { m: 2 } }}>
+            <TextField
               type="text"
               name="username"
               placeholder="username"
               value={username || ""}
-              onChange={handleUsername} />
-          </div>
-          <div style={{ margin: "10px 0" }}>
-            <label>Password:</label>
-            <input
+              onChange={handleUsername}
+              id="input-with-icon-textfield"
+              label="Username"
+              InputProps={{
+                startAdornment: (
+                  <InputAdornment position="start">
+                    <AccountCircle />
+                  </InputAdornment>
+                ),
+              }}
+              variant="standard"
+            />
+            <TextField
               type="password"
               name="password"
               placeholder="password"
               value={password || ""}
               onChange={handlePassword}
+              id="input-with-icon-textfield"
+              label="Password"
+              InputProps={{
+                startAdornment: (
+                  <InputAdornment position="start">
+                    <PasswordIcon />
+                  </InputAdornment>
+                ),
+              }}
+              variant="standard"
             />
-          </div>
-          <p style={{color: 'red'}}>{errorMessage ? errorMessage : null}</p>
-          <input type="submit" />
+          </Box>
+          <p style={{ color: 'red' }}>{errorMessage ? errorMessage : null}</p>
+          <Button type="submit" variant="outlined">Submit</Button>
         </form>
       </div>
+      <br></br>
       <br></br>
       <div>
         Create an Account:
         <form onSubmit={handleAccountSubmit}>
-          <div style={{ margin: "10px 0" }}>
-            <label>First Name:</label>
-            <input
+        <Box sx={{ '& > :not(style)': { m: 2 } }}>
+            <TextField
               type="text"
-              name="firstname"
+              name="firstName"
               placeholder="First Name"
               value={firstName || ""}
               onChange={handleAccountFirstName}
+              id="input-with-icon-textfield"
+              label="First Name"
+              InputProps={{
+                startAdornment: (
+                  <InputAdornment position="start">
+                    <BadgeIcon />
+                  </InputAdornment>
+                ),
+              }}
+              variant="standard"
             />
-          </div>
-          <div style={{ margin: "10px 0" }}>
-            <label>Last Name:</label>
-            <input
+            <TextField
               type="text"
-              name="username"
+              name="lastName"
               placeholder="Last Name"
               value={lastName || ""}
               onChange={handleAccountLastName}
+              id="input-with-icon-textfield"
+              label="Last Name"
+              InputProps={{
+                startAdornment: (
+                  <InputAdornment position="start">
+                    <BadgeIcon />
+                  </InputAdornment>
+                ),
+              }}
+              variant="standard"
             />
-          </div>
-          <div style={{ margin: "10px 0" }}>
-            <label>Username:</label>
-            <input
+            <TextField
               type="text"
               name="username"
               placeholder="username"
               value={accountUsername || ""}
               onChange={handleAccountUsername}
+              id="input-with-icon-textfield"
+              label="Username"
+              InputProps={{
+                startAdornment: (
+                  <InputAdornment position="start">
+                    <AccountCircle />
+                  </InputAdornment>
+                ),
+              }}
+              variant="standard"
             />
-          </div>
-          <div style={{ margin: "10px 0" }}>
-            <label>Email:</label>
-            <input
+            <TextField
               type="text"
               name="email"
               placeholder="e-mail"
               value={email || ""}
               onChange={handleAccountEmail}
+              id="input-with-icon-textfield"
+              label="E-Mail"
+              InputProps={{
+                startAdornment: (
+                  <InputAdornment position="start">
+                    <EmailIcon />
+                  </InputAdornment>
+                ),
+              }}
+              variant="standard"
             />
-          </div>
-          <div style={{ margin: "10px 0" }}>
-            <label>Password:</label>
-            <input
+            <TextField
               type="password"
               name="password"
               placeholder="password"
               value={accountPassword || ""}
               onChange={handleAccountPassword}
+              id="input-with-icon-textfield"
+              label="Password"
+              InputProps={{
+                startAdornment: (
+                  <InputAdornment position="start">
+                    <PasswordIcon />
+                  </InputAdornment>
+                ),
+              }}
+              variant="standard"
             />
-          </div>
-          <input type="submit" />
+          </Box>
+          <Button type="submit" variant="outlined">Submit</Button>
         </form>
       </div>
     </div>

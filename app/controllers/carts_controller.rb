@@ -1,31 +1,56 @@
 class CartsController < ApplicationController
-
+#   skip_before_action :authorize, only: [:create, :show, :update]
 # full CRUD for Carts 
 
 #show all carts 
     def index
-        render json: nil
-
+        render json: Cart.all
     end
 
     #
     def show 
-        render json: nil
 
+        render json: Cart.where(user_id: session[:user_id]), include: :product
+        
     end 
-
+    
+    
     def create
-        render json: nil
-
+        found_cart = Cart.find_by(product_id: params[:product_id], user_id: session[:user_id])
+        if found_cart
+            found_cart.quantity += params[:quantity].to_i
+            found_cart.save
+            render json: found_cart, status: 201
+        else
+            cart = Cart.create!(quantity: params[:quantity], product_id: params[:product_id], user_id: session[:user_id])
+            render json: cart, status: 201
+        end
     end
+ 
 
     def update
-        render json: nil
-
+        found_cart = Cart.find_by(product_id: params[:product_id], user_id: session[:user_id])
+        if found_cart
+            found_cart.quantity -= params[:quantity].to_i
+             if found_cart.quantity == 0 
+            found_cart.destroy
+            else 
+            found_cart.save
+            end
+        else
+            render json: {error: "Not found"}, status: 200
+        end
     end
 
     def destroy
+        found_cart = Cart.where(user_id: session[:user_id])
+        found_cart.destroy_all
         render json: nil
     end
+
+    # private
+    # def cart_params
+    #   params.permit(:quantity, :product_id)
+    # end
 
 end

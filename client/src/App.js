@@ -17,15 +17,10 @@ import { AuthContext } from './lib/AuthContext';
 function App() {
 
   const [user, setUser] = useState({})
+  const [cartCount, setCartCount] = useState(0)
 
-  
 
-  const contextValue = {
-    user,
-    setUser
-  }
-
-  useEffect(() => {
+  const refreshUserData = () => {
     fetch('/me')
       .then(res => {
 
@@ -33,10 +28,17 @@ function App() {
           res.json()
             .then(data => {
               setUser(data)
+              setCartCount(data?.carts?.reduce((prev, item) => {
+                return prev + item.quantity
+              }, 0));
             })
         }
 
       })
+  }
+
+  useEffect(() => {
+    refreshUserData();
   }, [])
 
   const handleLogout = () => {
@@ -44,11 +46,18 @@ function App() {
     setUser({})
   }
 
+  const contextValue = {
+    user,
+    cartCount,
+    setUser,
+    handleLogout,
+    refreshUserData
+  }
+
   return (
     <AuthContext.Provider value={contextValue}>
       <Logo />
       <NavBar />
-      <button onClick={handleLogout}>Logout</button>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/SignIn" element={<SignIn user={user} setUser={setUser} />} />
@@ -58,7 +67,7 @@ function App() {
         <Route path="/map" element={<Map />} />
         <Route path="/productDetails/:productId" element={<ProductDetails />} />
         {/* <Route path="/product/*" element={<NotFoundProduct />} /> */}
-        
+
       </Routes>
       <Footer />
     </AuthContext.Provider>

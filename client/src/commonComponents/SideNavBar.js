@@ -64,10 +64,10 @@ export default function SideNavBar() {
         <Tab label="Drinks" {...a11yProps(4)} />
       </Tabs>
       <SideNavBarPanel value={value} index={0}>
-      <DisplayItems itemType={"fruits"}/>
+      <DisplayItems categoryType={"fruits"}/>
       </SideNavBarPanel>
       <SideNavBarPanel value={value} index={1}>
-      <DisplayItems itemType={"Vegetable"}/>
+      <DisplayItems categoryType={"vegetable"}/>
       </SideNavBarPanel>
       <SideNavBarPanel value={value} index={2}>
       Coming Soon!
