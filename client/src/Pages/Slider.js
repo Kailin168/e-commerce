@@ -6,486 +6,458 @@ function Slider() {
 
     return(
    
+
+
+      <><h3>Shop By Category</h3><div>
+        <div className="shop_bycategory">
+  <div className="box">
+    <div className="content">
+      <a href="/collections/refrigerated-frozen-meat">
+        <div className="thumb">
+          <img src="//cdn.shopify.com/s/files/1/0587/2045/2783/files/home-cate_1_d52a52a0-7433-4914-a95f-3f1ef2092b9d_188x146.webp?v=1648891673" />
+        </div>
+        <h4>Plant-Based Meats</h4>
+      </a>
+    </div>
+  </div>
+  <div className="box">
+    <div className="content">
+      <a href="/collections/vegan-chocolate">
+        <div className="thumb">
+          <img src="//cdn.shopify.com/s/files/1/0587/2045/2783/files/home-cate_4_188x146.webp?v=1648891673" />
+        </div>
+        <h4>Chocolate</h4>
+      </a>
+    </div>
+  </div>
+  <div className="box">
+    <div className="content">
+      <a href="/collections/vegan-cheese">
+        <div className="thumb">
+          <img src="//cdn.shopify.com/s/files/1/0587/2045/2783/files/home-cate_7_188x146.webp?v=1648891673" />
+        </div>
+        <h4>Cheese</h4>
+      </a>
+    </div>
+  </div>
+  <div className="box">
+    <div className="content">
+      <a href="/collections/juice">
+        <div className="thumb">
+          <img src="//cdn.shopify.com/s/files/1/0587/2045/2783/files/home-cate_2_188x146.webp?v=1648891673" />
+        </div>
+        <h4>Juices</h4>
+      </a>
+    </div>
+  </div>
+  <div className="box">
+    <div className="content">
+      <a href="/collections/vegan-dairy-products">
+        <div className="thumb">
+          <img src="//cdn.shopify.com/s/files/1/0587/2045/2783/files/home-cate_3_188x146.webp?v=1648891673" />
+        </div>
+        <h4>Dairy &amp; Eggs</h4>
+      </a>
+    </div>
+  </div>
+  <div className="box">
+    <div className="content">
+      <a href="/collections/refrigerated-frozen-snacks">
+        <div className="thumb">
+          <img src="//cdn.shopify.com/s/files/1/0587/2045/2783/files/home-cate_6_188x146.webp?v=1648891673" />
+        </div>
+        <h4>Snacks</h4>
+      </a>
+    </div>
+  </div>
+  <div className="box">
+    <div className="content">
+      <a href="/collections/vegan-baking-products">
+        <div className="thumb">
+          <img src="//cdn.shopify.com/s/files/1/0587/2045/2783/files/home-cate_5_188x146.webp?v=1648891673" />
+        </div>
+        <h4>Baking</h4>
+      </a>
+    </div>
+  </div>
+</div>
+
+<h1 className=""> </h1>
+
 <div
-  id="shopify-section-162826213599eb9fcf"
-  className="shopify-section home-images-slideshow-sections"
+  className="large-tile-list"
+  viewsize="xlarge"
+  itemcountpriorslide="[object Object]"
+  index={0}
 >
-  <section className="home_slide_icons">
-    <div className="container">
-      <div className="row">
-        <div className="col-lg-12">
-          <h2>
-            The largest selection of vegan products online{" "}
-            <a href="/collections/just-added" className="whapp-just-added">
-              shop our newest products
-            </a>
-          </h2>
-          <ul>
-            <li>
-              <a href="/collections/just-added">New In</a>
-            </li>
-            <li>
-              <a href="/collections/promotions">Sale</a>
-            </li>
-            <li>
-              <a href="/collections/vegan-groceries">Bestsellers</a>
-            </li>
-          </ul>
-        </div>
-        <div className="col-lg-12 init-slider">
-          <div
-            id="new_home_slider"
-            className="slick-initialized slick-slider slick-dotted"
-            role="toolbar"
-          >
-            <button
-              type="button"
-              className="hms_arw nhs_prev slick-arrow"
-              style={{ display: "inline-block" }}
-            />
-            <div aria-live="polite" className="slick-list draggable">
-              <div
-                className="slick-track"
-                style={{ opacity: 1, width: 5229 }}
-                role="listbox"
-              >
-                <div
-                  className="slide-wrapper slick-slide slick-current slick-active"
-                  data-slick-index={0}
-                  aria-hidden="false"
-                  tabIndex={-1}
-                  role="option"
-                  aria-describedby="slick-slide20"
-                  style={{
-                    width: 747,
-                    position: "relative",
-                    left: 0,
-                    top: 0,
-                    zIndex: 999,
-                    opacity: 1
-                  }}
-                >
-                  <div className="slide_content">
-                    <a
-                      href="/collections/vegan-cheese"
-                      className="whapp-just-added"
-                      tabIndex={0}
-                    >
-                      <img
-                        className="mobile_off"
-                        alt="Plant Based Community, Lifestyle, Food"
-                        src="//cdn.shopify.com/s/files/1/0587/2045/2783/files/D_Vegan_Cheese.jpg?v=1659449648"
+  <div className="large-tile-list_item">
+    <div className="flex-wrap large-tile_container spyglass-nav-group_wrapper">
+      {/**/}{" "}
+      <div className="large-tile large-tile--clickable">
+        <img
+          src="https://i5.peapod.com/c/XW/XWM3S.jpg"
+          alt="A serving board with lunch sandwiches on it"
+          className="large-tile_image"
+        />{" "}
+        {/**/}{" "}
+        <div className="large-tile_content">
+          <div>
+            <h2 className="h6-bold large-tile_headline">
+              Elevate Any Sandwich
+            </h2>{" "}
+            <div className="large-tile_description">
+              <p className="large-tile_text-block">
+                <span>
+                  With NEW Taste of Inspirations® Deli Meats and Cheeses. Bring
+                  high quality taste, without the high quality cost.
+                </span>
+              </p>
+            </div>{" "}
+            <div className="large-tile_link">
+              <button className="btn large-tile_link-btn">
+                Shop Select Stores
+                <div className="large-tile_link-stroke">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-label="Stroke 1"
+                    viewBox="0 0 7 12"
+                    role="presentation"
+                    aria-hidden="true"
+                    focusable="false"
+                    className=""
+                  >
+                    <title lang="en">Stroke 1</title>
+                    <desc />
+                    <g fill="" stroke="">
+                      <path
+                        d="m1 1 5 5-5 5"
+                        strokeWidth={2}
+                        fill="none"
+                        fillRule="evenodd"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="large-tile_link-stroke-color"
                       />
-                      <img
-                        src="//cdn.shopify.com/s/files/1/0587/2045/2783/files/M_Vegan_Cheese.jpg?v=1659449656"
-                        className="mobile_on"
-                      />
-                    </a>
-                  </div>
+                    </g>
+                  </svg>
                 </div>
-                <div
-                  className="slide-wrapper slick-slide"
-                  data-slick-index={1}
-                  aria-hidden="true"
-                  tabIndex={-1}
-                  role="option"
-                  aria-describedby="slick-slide21"
-                  style={{
-                    transition: "opacity 500ms linear 0s",
-                    width: 747,
-                    position: "relative",
-                    left: "-747px",
-                    top: 0,
-                    zIndex: 998,
-                    opacity: 0
-                  }}
-                >
-                  <div className="slide_content">
-                    <a
-                      href="/collections/vegan-candy-chocolate"
-                      className="whapp-just-added"
-                      tabIndex={-1}
-                    >
-                      <img
-                        className="mobile_off"
-                        alt="Plant Based Community, Lifestyle, Food"
-                        src="//cdn.shopify.com/s/files/1/0587/2045/2783/files/D_Sweet_Snacks.jpg?v=1659449456"
-                      />
-                      <img
-                        src="//cdn.shopify.com/s/files/1/0587/2045/2783/files/M_Sweet_Snacks.jpg?v=1659449475"
-                        className="mobile_on"
-                      />
-                    </a>
-                  </div>
-                </div>
-                <div
-                  className="slide-wrapper slick-slide"
-                  data-slick-index={2}
-                  aria-hidden="true"
-                  tabIndex={-1}
-                  role="option"
-                  aria-describedby="slick-slide22"
-                  style={{
-                    transition: "opacity 500ms linear 0s",
-                    width: 747,
-                    position: "relative",
-                    left: "-1494px",
-                    top: 0,
-                    zIndex: 998,
-                    opacity: 0
-                  }}
-                >
-                  <div className="slide_content">
-                    <a
-                      href="/collections/vegan-jerky"
-                      className="whapp-just-added"
-                      tabIndex={-1}
-                    >
-                      <img
-                        className="mobile_off"
-                        alt="Plant Based Community, Lifestyle, Food"
-                        src="//cdn.shopify.com/s/files/1/0587/2045/2783/files/D_Vegan_Jerky.jpg?v=1659449580"
-                      />
-                      <img
-                        src="//cdn.shopify.com/s/files/1/0587/2045/2783/files/M_Vegan_Jerky.jpg?v=1659449602"
-                        className="mobile_on"
-                      />
-                    </a>
-                  </div>
-                </div>
-                <div
-                  className="slide-wrapper slick-slide"
-                  data-slick-index={3}
-                  aria-hidden="true"
-                  tabIndex={-1}
-                  role="option"
-                  aria-describedby="slick-slide23"
-                  style={{
-                    transition: "opacity 500ms linear 0s",
-                    width: 747,
-                    position: "relative",
-                    left: "-2241px",
-                    top: 0,
-                    zIndex: 998,
-                    opacity: 0
-                  }}
-                >
-                  <div className="slide_content">
-                    <a
-                      href="/collections/chomp"
-                      className="whapp-just-added"
-                      tabIndex={-1}
-                    >
-                      <img
-                        className="mobile_off"
-                        alt="Plant Based Community, Lifestyle, Food"
-                        src="//cdn.shopify.com/s/files/1/0587/2045/2783/files/D_CHOMP.jpg?v=1659449691"
-                      />
-                      <img
-                        src="//cdn.shopify.com/s/files/1/0587/2045/2783/files/M_CHOMP.jpg?v=1659449706"
-                        className="mobile_on"
-                      />
-                    </a>
-                  </div>
-                </div>
-                <div
-                  className="slide-wrapper slick-slide"
-                  data-slick-index={4}
-                  aria-hidden="true"
-                  tabIndex={-1}
-                  role="option"
-                  aria-describedby="slick-slide24"
-                  style={{
-                    transition: "opacity 500ms linear 0s",
-                    width: 747,
-                    position: "relative",
-                    left: "-2988px",
-                    top: 0,
-                    zIndex: 998,
-                    opacity: 0
-                  }}
-                >
-                  <div className="slide_content">
-                    <a
-                      href="/collections/vegan-chips"
-                      className="whapp-just-added"
-                      tabIndex={-1}
-                    >
-                      <img
-                        className="mobile_off"
-                        alt="Plant Based Community, Lifestyle, Food"
-                        src="//cdn.shopify.com/s/files/1/0587/2045/2783/files/D_Savory_Snacks.jpg?v=1659449749"
-                      />
-                      <img
-                        src="//cdn.shopify.com/s/files/1/0587/2045/2783/files/M_Savory_Snacks.jpg?v=1659449764"
-                        className="mobile_on"
-                      />
-                    </a>
-                  </div>
-                </div>
-                <div
-                  className="slide-wrapper slick-slide"
-                  data-slick-index={5}
-                  aria-hidden="true"
-                  tabIndex={-1}
-                  role="option"
-                  aria-describedby="slick-slide25"
-                  style={{
-                    transition: "opacity 500ms linear 0s",
-                    width: 747,
-                    position: "relative",
-                    left: "-3735px",
-                    top: 0,
-                    zIndex: 998,
-                    opacity: 0
-                  }}
-                >
-                  <div className="slide_content">
-                    <a
-                      href="/collections/vegan-beverages"
-                      className="whapp-just-added"
-                      tabIndex={-1}
-                    >
-                      <img
-                        className="mobile_off"
-                        alt="Plant Based Community, Lifestyle, Food"
-                        src="//cdn.shopify.com/s/files/1/0587/2045/2783/files/D_Refreshing_Beverages.jpg?v=1659449891"
-                      />
-                      <img
-                        src="//cdn.shopify.com/s/files/1/0587/2045/2783/files/M_Refreshing_Beverages.jpg?v=1659449898"
-                        className="mobile_on"
-                      />
-                    </a>
-                  </div>
-                </div>
-                <div
-                  className="slide-wrapper slick-slide"
-                  data-slick-index={6}
-                  aria-hidden="true"
-                  tabIndex={-1}
-                  role="option"
-                  aria-describedby="slick-slide26"
-                  style={{
-                    transition: "opacity 500ms linear 0s",
-                    width: 747,
-                    position: "relative",
-                    left: "-4482px",
-                    top: 0,
-                    zIndex: 998,
-                    opacity: 0
-                  }}
-                >
-                  <div className="slide_content">
-                    <a
-                      href="/collections/daring"
-                      className="whapp-just-added"
-                      tabIndex={-1}
-                    >
-                      <img
-                        className="mobile_off"
-                        alt="Plant Based Community, Lifestyle, Food"
-                        src="//cdn.shopify.com/s/files/1/0587/2045/2783/files/D_Daring_Banner.jpg?v=1657292208"
-                      />
-                      <img
-                        src="//cdn.shopify.com/s/files/1/0587/2045/2783/files/M_Daring_Banner.jpg?v=1657292226"
-                        className="mobile_on"
-                      />
-                    </a>
-                  </div>
-                </div>
-              </div>
+              </button>
             </div>
-            <button
-              type="button"
-              className="hms_arw nhs_next slick-arrow"
-              style={{ display: "inline-block" }}
-            />
-            <ul
-              className="slick-dots"
-              style={{ display: "block" }}
-              role="tablist"
+          </div>
+        </div>{" "}
+        {/**/}
+      </div>
+    </div>
+  </div>
+  <div className="large-tile-list_item">
+    <div className="flex-wrap large-tile_container spyglass-nav-group_wrapper">
+      {/**/}{" "}
+      <div className="large-tile large-tile--clickable">
+        <img
+          src="https://i5.peapod.com/c/ZP/ZPQ3P.jpg"
+          alt="A car trunk filled with bags of giant food groceries with the Giant pickup logo, Frozen farmers sorbet pints"
+          className="large-tile_image"
+        />{" "}
+        {/**/}{" "}
+        <div className="large-tile_content">
+          <div>
+            <h2 className="h6-bold large-tile_headline">
+              Save $5 On Your Pickup Order When You Shop Local
+            </h2>{" "}
+            <div className="large-tile_description">
+              <p className="large-tile_text-block">
+                <span>Plus find more exclusive savings here.</span>
+              </p>
+            </div>{" "}
+            <div className="large-tile_link">
+              <button className="btn large-tile_link-btn">
+                Shop Now
+                <div className="large-tile_link-stroke">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-label="Stroke 1"
+                    viewBox="0 0 7 12"
+                    role="presentation"
+                    aria-hidden="true"
+                    focusable="false"
+                    className=""
+                  >
+                    <title lang="en">Stroke 1</title>
+                    <desc />
+                    <g fill="" stroke="">
+                      <path
+                        d="m1 1 5 5-5 5"
+                        strokeWidth={2}
+                        fill="none"
+                        fillRule="evenodd"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="large-tile_link-stroke-color"
+                      />
+                    </g>
+                  </svg>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>{" "}
+        {/**/}
+      </div>
+    </div>
+  </div>
+  <div className="large-tile-list_item">
+    <div className="flex-wrap large-tile_container spyglass-nav-group_wrapper">
+      {/**/}{" "}
+      <div className="large-tile large-tile--clickable">
+        <img
+          src="https://i5.peapod.com/c/82/82L4U.jpg"
+          alt="Digital Coupons"
+          className="large-tile_image"
+        />{" "}
+        {/**/}{" "}
+        <div className="large-tile_content">
+          <div>
+            <h2 className="h6-bold large-tile_headline">
+              Over $300 in Digital Coupons
+            </h2>{" "}
+            <div className="large-tile_description">
+              <p className="large-tile_text-block">
+                <span>Every week—online and in the app!</span>
+              </p>
+            </div>{" "}
+            <div className="large-tile_link">
+              <button className="btn large-tile_link-btn">
+                Clip Now
+                <div className="large-tile_link-stroke">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-label="Stroke 1"
+                    viewBox="0 0 7 12"
+                    role="presentation"
+                    aria-hidden="true"
+                    focusable="false"
+                    className=""
+                  >
+                    <title lang="en">Stroke 1</title>
+                    <desc />
+                    <g fill="" stroke="">
+                      <path
+                        d="m1 1 5 5-5 5"
+                        strokeWidth={2}
+                        fill="none"
+                        fillRule="evenodd"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="large-tile_link-stroke-color"
+                      />
+                    </g>
+                  </svg>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>{" "}
+        {/**/}
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div className="recipes_container">
+  <div className="widget-title not-before">
+    <h3 className="box-title">
+      <span className="title">
+        <h1 style={{textAlign:"center"}}>Our Favorite Recipes</h1>
+      </span>
+    </h3>
+    
+  </div>
+  <div className="clearfix" />
+  <div className="content-blog">
+    <div className="row list-blogs blog-grid" data-rows={3}>
+      <div className="col-12 col-lg-4 three-blocks item">
+        <div className="blog-item">
+          <div className="article-img">
+            <a
+              href="/blogs/vegan-recipes/broccoli-slaw"
+              className="animate-scale adaptive_height"
             >
-              <li
-                className="slick-active"
-                aria-hidden="false"
-                role="presentation"
-                aria-selected="true"
-                aria-controls="navigation20"
-                id="slick-slide20"
-              >
-                <button
-                  type="button"
-                  data-role="none"
-                  role="button"
-                  tabIndex={0}
-                >
-                  1
-                </button>
-              </li>
-              <li
-                aria-hidden="true"
-                role="presentation"
-                aria-selected="false"
-                aria-controls="navigation21"
-                id="slick-slide21"
-                className=""
-              >
-                <button
-                  type="button"
-                  data-role="none"
-                  role="button"
-                  tabIndex={0}
-                >
-                  2
-                </button>
-              </li>
-              <li
-                aria-hidden="true"
-                role="presentation"
-                aria-selected="false"
-                aria-controls="navigation22"
-                id="slick-slide22"
-                className=""
-              >
-                <button
-                  type="button"
-                  data-role="none"
-                  role="button"
-                  tabIndex={0}
-                >
-                  3
-                </button>
-              </li>
-              <li
-                aria-hidden="true"
-                role="presentation"
-                aria-selected="false"
-                aria-controls="navigation23"
-                id="slick-slide23"
-                className=""
-              >
-                <button
-                  type="button"
-                  data-role="none"
-                  role="button"
-                  tabIndex={0}
-                >
-                  4
-                </button>
-              </li>
-              <li
-                aria-hidden="true"
-                role="presentation"
-                aria-selected="false"
-                aria-controls="navigation24"
-                id="slick-slide24"
-                className=""
-              >
-                <button
-                  type="button"
-                  data-role="none"
-                  role="button"
-                  tabIndex={0}
-                >
-                  5
-                </button>
-              </li>
-              <li
-                aria-hidden="true"
-                role="presentation"
-                aria-selected="false"
-                aria-controls="navigation25"
-                id="slick-slide25"
-                className=""
-              >
-                <button
-                  type="button"
-                  data-role="none"
-                  role="button"
-                  tabIndex={0}
-                >
-                  6
-                </button>
-              </li>
-              <li
-                aria-hidden="true"
-                role="presentation"
-                aria-selected="false"
-                aria-controls="navigation26"
-                id="slick-slide26"
-                className=""
-              >
-                <button
-                  type="button"
-                  data-role="none"
-                  role="button"
-                  tabIndex={0}
-                >
-                  7
-                </button>
-              </li>
-            </ul>
-          </div>
-          <div className="mb_shop_now">
-            <a href="/collections/pantry" className="whapp-just-added">
-              SHOP NOW
+              <img
+                src="//cdn.shopify.com/s/files/1/0587/2045/2783/articles/Broccoli_Slaw_481x392_crop_center.jpg?v=1661269231"
+                style={{ borderRadius: 20 }}
+                alt="Broccoli Slaw"
+                className='rec_test'
+              />
             </a>
           </div>
-        </div>
-        <div className="col-lg-4 col-sm-8 col-sm-12 slide-icons d-none">
-          <div className="row">
-            <div className="col-6">
-              <div className="shop-icon __icon_grocery">
-                <a href="/pages/vegan-foods" className="whapp-just-added">
-                  <img
-                    src="//cdn.shopify.com/s/files/1/0587/2045/2783/t/21/assets/grocery.svg?v=27778989837231738491646157294"
-                    alt="Plant Based Community, Lifestyle, Food"
-                  />
-                  <span>Plant-Based Groceries</span>
-                </a>
-              </div>
+          <div className="article-inner">
+            <h3 className="article-title">
+              <a href="/blogs/vegan-recipes/broccoli-slaw">
+                <span>Broccoli Slaw</span>
+              </a>
+            </h3>
+            <div className="blog_author">
+              <span className="article__date">
+                Created : <time dateTime="2022-08-24T15:00:01Z">August 24, 2022</time>
+              </span>
             </div>
-            <div className="col-6">
-              <div className="shop-icon __icon_xvip">
-                <a
-                  href="https://plantx.com/pages/xvip"
-                  className="whapp-just-added"
-                >
-                  <img
-                    src="//cdn.shopify.com/s/files/1/0587/2045/2783/t/21/assets/XVIP-Icon.svg?47354"
-                    alt="Plant Based Community, Lifestyle, Food"
-                  />
-                  <span>Join Now</span>
-                </a>
-              </div>
-            </div>
-            <div className="col-6">
-              <div className="shop-icon __icon_beauty">
-                <a
-                  href="https://plantx.com/collections/milk-cream"
-                  className="whapp-just-added"
-                >
-                  <span>Plant-Based Beverages</span>
-                </a>
-              </div>
-            </div>
-            <div className="col-6">
-              <div className="shop-icon __icon_xpets">
-                <a href="/collections/pets" className="whapp-just-added">
-                  <img
-                    src="//cdn.shopify.com/s/files/1/0587/2045/2783/t/21/assets/xpets.svg?v=120042687650255342031646157434"
-                    alt="Plant Based Community, Lifestyle, Food"
-                  />
-                  <span>Pet Products</span>
-                </a>
-              </div>
+            <div className="article-des" style={{ width:"60%"}}>
+              Opening Looking for a summer salad that will blow your guests
+              away? I've found it.&nbsp; Whether you are hosting a barbeque or
+              whipping up a light lunch, this broccoli slaw recipe ticks all...
             </div>
           </div>
         </div>
       </div>
+      <div className="col-12 col-lg-4 three-blocks item">
+        <div className="blog-item">
+          <div className="article-img">
+            <a
+              href="/blogs/vegan-recipes/strawberry-banana-smoothie"
+              className="animate-scale adaptive_height"
+            >
+              <img
+                src="//cdn.shopify.com/s/files/1/0587/2045/2783/articles/Strawberry_Banana_Smoothie_481x392_crop_center.jpg?v=1660628716"
+                style={{ borderRadius: 20 }}
+                alt="Strawberry Banana Smoothie"
+              />
+            </a>
+          </div>
+          <div className="article-inner">
+            <h3 className="article-title">
+              <a href="/blogs/vegan-recipes/strawberry-banana-smoothie">
+                <span>Strawberry Banana Smoothie</span>
+              </a>
+            </h3>
+            <div className="blog_author">
+              <span className="article__date">
+                Created : <time dateTime="2022-08-17T15:00:01Z">August 17, 2022</time>
+              </span>
+            </div>
+            <div className="article-des" style={{ width:"60%"}}>
+              Opening Want to level up your breakfast game? We’ve got the
+              perfect recipe.&nbsp; Made with fresh fruit and almost nothing
+              else, this strawberry banana smoothie recipe is simply delicious
+              and couldn't be easier...
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="col-12 col-lg-4 three-blocks item">
+        <div className="blog-item">
+          <div className="article-img">
+            <a
+              href="/blogs/vegan-recipes/sauteed-broccoli-rabe"
+              className="animate-scale adaptive_height"
+              
+            >
+              <img
+                src="//cdn.shopify.com/s/files/1/0587/2045/2783/articles/Sauteed_Broccoli_Rabe_481x392_crop_center.jpg?v=1660021514"
+                style={{ borderRadius: 20 }}
+                alt="Sautéed Broccoli Rabe"
+              />
+            </a>
+          </div>
+          <div className="article-inner">
+            <h3 className="article-title">
+              <a href="/blogs/vegan-recipes/sauteed-broccoli-rabe">
+                <span>Sautéed Broccoli Rabe</span>
+              </a>
+            </h3>
+            <div className="blog_author">
+              <span className="article__date">
+                Created : <time dateTime="2022-08-10T15:00:01Z">August 10, 2022</time>
+              </span>
+            </div>
+            <div className="article-des" style={{ width:"60%"}}>
+              Bitter. Nutty. Garlicky. Broccoli rabe is a legendary
+              Mediterranean side and this simple vegan broccoli rabe recipe
+              showcases the stunning veggie at its finest. The best part? It
+              couldn't be easier to whip...
+
+            </div>
+        
+          </div>
+        </div>
+      </div>
+      <div className="col-12 col-lg-4 three-blocks item">
+        <div className="blog-item">
+          <div className="article-img">
+            <a
+              href="/blogs/vegan-recipes/broccoli-slaw"
+              className="animate-scale adaptive_height"
+            >
+              <img
+                src="https://cdn.shopify.com/s/files/1/0587/2045/2783/articles/Black_Bean_Chili_481x392_crop_center.jpg?v=1659433412"
+                style={{ borderRadius: 20 }}
+                alt="Broccoli Slaw"
+                className='rec_test'
+              />
+            </a>
+          </div>
+          <div className="article-inner">
+            <h3 className="article-title">
+              <a href="/blogs/vegan-recipes/broccoli-slaw">
+                <span>Black Bean Chili</span>
+              </a>
+            </h3>
+            <div className="blog_author">
+              <span className="article__date">
+                Created : <time dateTime="2022-08-03T15:00:01Z">August 03, 2022</time>
+              </span>
+            </div>
+            <div className="article-des" style={{ width:"60%"}}>
+            This black bean recipe is colorful, nutritious, filling, and absolutely delicious. It’s a one-pot meal that cooks in 30 minutes, and you can adapt it to suit your own tastes or the ingredients you have at home..
+            </div>
+            <a href="/blogs/vegan-recipes" className="see_more">
+                <span>SEE ALL RECIPES</span>{" "}
+                  <img src="https://cdn.shopify.com/s/files/1/0587/2045/2783/files/pxarrow.svg?v=1657920670" />
+              </a>
+          </div>
+        </div>
+      </div>
     </div>
-  </section>
+  </div>
 </div>
+
+
+
+        <div className="col-6">
+          <div className="shop-icon __icon_xvip">
+            <a
+              href="https://plantx.com/pages/xvip"
+              className="whapp-just-added"
+            >
+              <img
+                src="https://cdn.shopify.com/s/files/1/0252/8373/products/complete-protein-1lb-natural_600x.png?v=1654542799"
+                alt="Plant Based Community, Lifestyle, Food" />
+              <span>Plant Based Community, Lifestyle, and Fitnes</span>
+            </a>
+          </div>
+        </div>
+        <div className="col-6">
+          <div className="shop-icon __icon_beauty">
+            <a href="/products/drinks" className="whapp-just-added">
+              <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9kLRJBJcc80fLa8WucCzp-a_U1rJV8jPV5Q4eNyD6bEvGmirKTps8KhNm_QikH7Jq6sc&usqp=CAU"
+              alt="Plant Based Community, Lifestyle, Food"/>
+            
+              <span>Plant-Based Beverages</span>
+            </a>
+          </div>
+        </div>
+        <div className="col-6">
+          <div className="shop-icon __icon_xpets">
+            <a href="/collections/pets" className="whapp-just-added">
+              <img
+                src="//cdn.shopify.com/s/files/1/0587/2045/2783/t/21/assets/xpets.svg?v=120042687650255342031646157434"
+                alt="Plant Based Community, Lifestyle, Food" />
+              <span>Pet Products...coming soon!</span>
+            </a>
+          </div>
+        </div>
+      </div></>
 
     )
 }
