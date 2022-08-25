@@ -23,9 +23,9 @@ function Footer() {
         <Link to="/map">Map</Link>
       </Typography>
         </a>
-        <a href="#">Products</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
+        <Link to="/product">Product</Link>
+        <Link to="/about">About</Link>
+        <Link to="/about">Contact</Link>
       </p>
       <p className="footer-company-name">Vegan Market © 2022</p>
     </div>

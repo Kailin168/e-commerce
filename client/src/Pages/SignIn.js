@@ -61,20 +61,21 @@ function SignIn({ user, setUser }) {
       },
       body: JSON.stringify(logIn)
     })
-      .then(res => {
-        if (res.ok) {
-          res.json()
-            .then(data => {
-              console.log(data)
-              setErrorMessage('')
-              setUser(data)
-              navigate('/');
-            })
-        } else {
-          res.json()
-            .then(({ error }) => setErrorMessage(error))
-        }
-      })
+    .then(res => {
+      if (res.ok) {
+        res.json()
+          .then(data => {
+            console.log(data)
+            setErrorMessage('')
+            setUser(data)
+            navigate('/');
+          })
+      } else {
+        res.json()
+        .then(({error}) => setErrorMessage(error))
+      }
+    })
+    e.target.reset();
   }
 
   const handleAccountSubmit = (e) => {
@@ -95,20 +96,21 @@ function SignIn({ user, setUser }) {
       },
       body: JSON.stringify(createAccount)
     })
-      .then(res => {
-        if (res.ok) {
-          res.json()
-            .then(data => {
-              console.log(data)
-              setErrorMessage('')
-              setUser(data)
-              navigate('/');
-            })
-        } else {
-          res.json()
-            .then(({ error }) => setErrorMessage(error))
-        }
-      })
+    .then(res => {
+      if (res.ok) {
+        res.json()
+          .then(data => {
+            console.log(data)
+            setErrorMessage('')
+            setUser(data)
+            navigate('/');
+          })
+      } else {
+        res.json()
+        .then(({error}) => setErrorMessage(error))
+      }
+    })
+    e.target.reset();
   }
 
   // if (user.id) {
