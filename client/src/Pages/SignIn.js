@@ -66,6 +66,7 @@ function SignIn({user, setUser}) {
         .then(({error}) => setErrorMessage(error))
       }
     })
+    e.target.reset();
   }
 
   const handleAccountSubmit = (e) => {
@@ -100,15 +101,16 @@ function SignIn({user, setUser}) {
         .then(({error}) => setErrorMessage(error))
       }
     })
+    e.target.reset();
   }
 
-  if (user.id) {
-    return (
-      <div>
-      Already logged in!
-      </div>
-    )
-  }
+  // if (user.id) {
+  //   return (
+  //     <div>
+  //     Already logged in!
+  //     </div>
+  //   )
+  // }
 
 
   return (
