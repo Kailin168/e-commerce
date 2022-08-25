@@ -3,6 +3,16 @@ import { useParams } from "react-router-dom";
 import Button from '@mui/material/Button';
 import AddBoxIcon from '@mui/icons-material/AddBox';
 import RemoveCircleIcon from '@mui/icons-material/RemoveCircle';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemText from '@mui/material/ListItemText';
+import ListItemAvatar from '@mui/material/ListItemAvatar';
+import Avatar from '@mui/material/Avatar';
+import ImageIcon from '@mui/icons-material/Image';
+import CommentIcon from '@mui/icons-material/Comment';
+import ForestIcon from '@mui/icons-material/Forest';
+import ScaleIcon from '@mui/icons-material/Scale';
+import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
 import AuthContext from "../lib/AuthContext";
 
 
@@ -40,9 +50,9 @@ function ProductDetails() {
         quantity: quantityCount,
       }),
     }).then((res) => res.json())
-    .then(() => {
-      auth.refreshUserData();
-    })
+      .then(() => {
+        auth.refreshUserData();
+      })
   }
 
   // if (Object.keys(product).length === 0) {
@@ -53,7 +63,6 @@ function ProductDetails() {
   return (
     <div style={{
       display: "flex",
-      background: "green",
       flexDirection: 'column'
     }}>
       <div style={{
@@ -62,38 +71,56 @@ function ProductDetails() {
         <div style={{
           display: 'flex',
           flex: 5,
-          background: "blue",
-          flexDirection: 'column'
+          flexDirection: 'column',
+          alignItem: "center"
         }}>
-          {product.image && <img height="300px" width="300px" src={`${product.image}`} />}
+          {product.image && <img height="500px" width="500px" src={`${product.image}`} />}
 
 
         </div>
         <div style={{
           flexDirection: "column",
           display: "flex",
-          flex: 1,
-          background: "pink",
+          flex: 3
         }}>
           <div style={{
-            background: "red",
             minHeight: '500px',
             display: 'flex',
             flex: 5,
             flexDirection: "column"
           }}>
-            <span>
-              {product.name}
-            </span>
-            <span>
-              {product.weight}
-            </span>
-            <span>
-              {product.price}
-            </span>
+            <List sx={{ width: '100%', bgcolor: 'background.paper' }}>
+              <ListItem>
+                <ListItemAvatar>
+                  <Avatar>
+                    <ForestIcon />
+                  </Avatar>
+                </ListItemAvatar>
+                <ListItemText primary={product.name} secondary="Item Name" />
+              </ListItem>
+              <ListItem>
+                <ListItemAvatar>
+                  <Avatar>
+                    <ScaleIcon />
+                  </Avatar>
+                </ListItemAvatar>
+                <ListItemText primary={product.weight} secondary="Item Weight" />
+              </ListItem>
+              <ListItem>
+                <ListItemAvatar>
+                  <Avatar>
+                    <MonetizationOnIcon />
+                  </Avatar>
+                </ListItemAvatar>
+                <ListItemText primary={product.price} secondary="Unit Price" />
+              </ListItem>
+            </List>
+           
             <div style={{
               display: 'flex',
-              alignItems: 'center'
+              alignItems: 'center',
+              marginTop: '100px',
+              justifyContent: "center"
             }}>
               <RemoveCircleIcon fontSize="small" onClick={() => {
                 setQuantityCount(Math.max(quantityCount - 1, 0));
@@ -109,24 +136,43 @@ function ProductDetails() {
             <Button size="small" onClick={handleAddToCart}>Add to Cart</Button>
           </div>
           <div style={{
-            background: "purple", display: 'flex',
+            display: 'flex',
             flex: 3,
           }}>
+            Description: <br></br>
+            <br></br>
             {product.description}
           </div>
         </div>
       </div>
       <div style={{
-        background: "orange", display: "flex",
+         display: "flex",
         flexDirection: "column"
       }}>
-        {product.reviews && product.reviews.map((item) => {
-          return (
-            <div>
-              {item.review}
-            </div>
-          )
-        })}
+        <List sx={{ width: '100%', bgcolor: 'background.paper' }}>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+          Product Review:
+          {product.reviews && product.reviews.map((item) => {
+            return (
+              <div>
+                <ListItem>
+                  <ListItemAvatar>
+                    <Avatar>
+                      <CommentIcon />
+                    </Avatar>
+                  </ListItemAvatar>
+                  <ListItemText primary={item.review} />
+                </ListItem>
+              </div>
+            )
+          })}
+
+        </List>
       </div>
     </div>
 

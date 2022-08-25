@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ItemCard from "./ItemCard";
+import Grid from '@mui/material/Grid';
+
 
 function DisplayItems({ categoryType }) {
 
@@ -16,17 +18,15 @@ function DisplayItems({ categoryType }) {
         }
       })
   }, [])
-  // console.log(items)
 
-  const showItems = items.map(item => <ItemCard item={item} />)
+
+  const showItems = items.map(item => <Grid item xs={3}><ItemCard sx={{maxWidth:"auto"}} item={item} /></Grid>)
   return (
-    <div>
-      {/* {items.map((item) => {
-        return (
-          <ItemCard item={item} />
-        )
-      })} */}
-      {showItems}
+    <div style={{width: "1200px", marginLeft:"10px"}}>
+
+      <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+          {showItems}
+      </Grid>
     </div>
 
   );

@@ -58,9 +58,9 @@ export default function ItemCard({ item }) {
           {item.name}
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          {item.weight}
+          Weight: {item.weight}
           <br></br>
-          {item.price}
+          Price: ${item.price}
         </Typography>
       </CardContent>
       <CardActions>
