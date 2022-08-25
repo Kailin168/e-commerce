@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import { useNavigate } from "react-router-dom";
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
@@ -7,9 +7,10 @@ import CustomizedBadges from "./CustomizedBadges.js";
 import HomeIcon from '@mui/icons-material/Home';
 import TapasIcon from '@mui/icons-material/Tapas';
 import { useLocation } from 'react-router-dom'
-
+import AuthContext, { isLoggedIn } from "../lib/AuthContext";
 
 export default function TopNavBar() {
+  const auth = useContext(AuthContext);
   const [value, setValue] = useState(0);
 
   let navigate = useNavigate();
@@ -44,6 +45,9 @@ export default function TopNavBar() {
         navigate("/cart");
         break;
       case 3:
+        if (isLoggedIn(auth.user)) {
+          auth.handleLogout()
+        }
         navigate("/signin");
         break;
       default:
@@ -56,7 +60,7 @@ export default function TopNavBar() {
       <Tab icon={<HomeIcon />} label="HOME" />
       <Tab icon={<TapasIcon />} label="PRODUCTS" />
       <Tab icon={<CustomizedBadges />} label="CART" />
-      <Tab icon={<AccountBoxIcon />} label="SIGNIN" />
+      <Tab icon={<AccountBoxIcon />} label={isLoggedIn(auth.user) ? "SIGN OUT" : "SIGN IN"} />
     </Tabs>
   );
 }

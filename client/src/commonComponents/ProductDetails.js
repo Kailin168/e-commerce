@@ -1,28 +1,32 @@
-import React from "react";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from 'react';
 import { useParams } from "react-router-dom";
 import Button from '@mui/material/Button';
 import AddBoxIcon from '@mui/icons-material/AddBox';
 import RemoveCircleIcon from '@mui/icons-material/RemoveCircle';
 import AuthContext from "../lib/AuthContext";
-import { useContext } from "react";
-import { minHeight } from "@mui/system";
 
 
 function ProductDetails() {
-
-  const [quantityCount, setQuantityCount] = useState(1);
-  const [vegetable, setVegetable] = useState([]);
   const auth = useContext(AuthContext);
+  const [quantityCount, setQuantityCount] = useState(1);
+  const [product, setProduct] = useState({});
   let params = useParams();
 
 
   useEffect(() => {
     fetch(`/products/${params.productId}`)
       .then(res => res.json())
-      .then(setVegetable)
+      .then((data) => {
+        if (!data.error) {
+          setProduct(data)
+        } else {
+          setProduct({})
+        }
+      })
   }, [])
-  console.log(vegetable)
+  console.log(product)
+
+
 
 
   const handleAddToCart = () => {
@@ -35,9 +39,15 @@ function ProductDetails() {
         product_id: params.productId,
         quantity: quantityCount,
       }),
+    }).then((res) => res.json())
+    .then(() => {
+      auth.refreshUserData();
     })
   }
 
+  // if (Object.keys(product).length === 0) {
+  //   return <></>;
+  // }
 
 
   return (
@@ -55,7 +65,7 @@ function ProductDetails() {
           background: "blue",
           flexDirection: 'column'
         }}>
-          <img height="300px" width="300px" src={`${vegetable.image}`} />
+          {product.image && <img height="300px" width="300px" src={`${product.image}`} />}
 
 
         </div>
@@ -73,13 +83,13 @@ function ProductDetails() {
             flexDirection: "column"
           }}>
             <span>
-              {vegetable.name}
+              {product.name}
             </span>
             <span>
-              {vegetable.weight}
+              {product.weight}
             </span>
             <span>
-              {vegetable.price}
+              {product.price}
             </span>
             <div style={{
               display: 'flex',
@@ -100,17 +110,23 @@ function ProductDetails() {
           </div>
           <div style={{
             background: "purple", display: 'flex',
-            flex: 1,
+            flex: 3,
           }}>
-            {vegetable.description}
+            {product.description}
           </div>
         </div>
       </div>
       <div style={{
         background: "orange", display: "flex",
-        flexDirection: "row"
+        flexDirection: "column"
       }}>
-        {vegetable.review}
+        {product.reviews && product.reviews.map((item) => {
+          return (
+            <div>
+              {item.review}
+            </div>
+          )
+        })}
       </div>
     </div>
 

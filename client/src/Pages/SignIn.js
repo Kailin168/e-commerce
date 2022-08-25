@@ -1,8 +1,9 @@
 import React from "react";
 import { useState, useEffect } from "react";
-
+import { useNavigate } from "react-router-dom";
 
 function SignIn({user, setUser}) {
+  let navigate = useNavigate();
   const [username, setUsername] = useState("")
   const [password, setPassword] = useState("")
   const [errorMessage, setErrorMessage] = useState("")
@@ -58,6 +59,7 @@ function SignIn({user, setUser}) {
             console.log(data)
             setErrorMessage('')
             setUser(data)
+            navigate('/');
           })
       } else {
         res.json()
@@ -91,6 +93,7 @@ function SignIn({user, setUser}) {
             console.log(data)
             setErrorMessage('')
             setUser(data)
+            navigate('/');
           })
       } else {
         res.json()

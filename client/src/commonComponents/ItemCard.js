@@ -14,33 +14,37 @@ import AuthContext from "../lib/AuthContext";
 import { useContext } from "react";
 
 
-export default function ItemCard({item}) {
+export default function ItemCard({ item }) {
 
   const [quantityCount, setQuantityCount] = useState(1);
   const auth = useContext(AuthContext);
 
   let navigate = useNavigate();
 
-  const showProductDetails = () =>{
-    let path =  `/productDetails/${item.id}`;
+  const showProductDetails = () => {
+    let path = `/productDetails/${item.id}`;
     navigate(path);
   }
 
 
-  const handleAddToCart =()=>{
+  const handleAddToCart = () => {
     fetch('/create_cart', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ 
+      body: JSON.stringify({
         user_id: auth.user.id,
         product_id: item.id,
         quantity: quantityCount,
       }),
-    })}
+    }).then((res) => res.json())
+      .then(() => {
+        auth.refreshUserData();
+      })
+  }
 
-  
+
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardMedia

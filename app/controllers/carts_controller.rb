@@ -11,10 +11,10 @@ class CartsController < ApplicationController
     def show 
 
         render json: Cart.where(user_id: session[:user_id]), include: :product
-
+        
     end 
-
-  
+    
+    
     def create
         found_cart = Cart.find_by(product_id: params[:product_id], user_id: session[:user_id])
         if found_cart
@@ -22,7 +22,7 @@ class CartsController < ApplicationController
             found_cart.save
             render json: found_cart, status: 201
         else
-            cart = Cart.create!(cart_params)
+            cart = Cart.create!(quantity: params[:quantity], product_id: params[:product_id], user_id: session[:user_id])
             render json: cart, status: 201
         end
     end
@@ -43,12 +43,14 @@ class CartsController < ApplicationController
     end
 
     def destroy
+        found_cart = Cart.where(user_id: session[:user_id])
+        found_cart.destroy_all
         render json: nil
     end
 
-    private
-    def cart_params
-      params.permit(:quantity, :product_id)
-    end
+    # private
+    # def cart_params
+    #   params.permit(:quantity, :product_id)
+    # end
 
 end
