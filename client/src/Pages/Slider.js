@@ -20,23 +20,14 @@ function Slider() {
       </a>
     </div>
   </div>
-  <div className="box">
-    <div className="content">
-      <a href="/collections/vegan-chocolate">
-        <div className="thumb">
-          <img src="//cdn.shopify.com/s/files/1/0587/2045/2783/files/home-cate_4_188x146.webp?v=1648891673" />
-        </div>
-        <h4>Chocolate</h4>
-      </a>
-    </div>
-  </div>
+  iv>
   <div className="box">
     <div className="content">
       <a href="/collections/vegan-cheese">
         <div className="thumb">
-          <img src="//cdn.shopify.com/s/files/1/0587/2045/2783/files/home-cate_7_188x146.webp?v=1648891673" />
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCSS2OqXdonaql39SLlkZZjGYH_qAHtE-Mltit6fTud0dNW5fPHhkEXMgGRlF4Dw3fQxk&usqp=CAU" />
         </div>
-        <h4>Cheese</h4>
+        <h4>Produce</h4>
       </a>
     </div>
   </div>
@@ -46,7 +37,7 @@ function Slider() {
         <div className="thumb">
           <img src="//cdn.shopify.com/s/files/1/0587/2045/2783/files/home-cate_2_188x146.webp?v=1648891673" />
         </div>
-        <h4>Juices</h4>
+        <h4>Beverages</h4>
       </a>
     </div>
   </div>
@@ -381,33 +372,27 @@ function Slider() {
           </div>
         </div>
       </div>
-      <div className="col-12 col-lg-4 three-blocks item">
-        <div className="blog-item">
-          <div className="article-img">
+      <div className="new_recipe_box">
+          <div className="recipe_img">
             <a
               href="/blogs/vegan-recipes/broccoli-slaw"
-              className="animate-scale adaptive_height"
-            >
+              className="animate-scale adaptive_height">
               <img
                 src="https://cdn.shopify.com/s/files/1/0587/2045/2783/articles/Black_Bean_Chili_481x392_crop_center.jpg?v=1659433412"
                 style={{ borderRadius: 20 }}
-                alt="Broccoli Slaw"
-                className='rec_test'
-              />
+                alt="Broccoli Slaw"/>
             </a>
-          </div>
+          
           <div className="article-inner">
             <h3 className="article-title">
               <a href="/blogs/vegan-recipes/broccoli-slaw">
                 <span>Black Bean Chili</span>
               </a>
             </h3>
-            <div className="blog_author">
               <span className="article__date">
                 Created : <time dateTime="2022-08-03T15:00:01Z">August 03, 2022</time>
               </span>
-            </div>
-            <div className="article-des" style={{ width:"60%"}}>
+            <div className="article_description" style={{ width:"60%"}}>
             This black bean recipe is colorful, nutritious, filling, and absolutely delicious. It’s a one-pot meal that cooks in 30 minutes, and you can adapt it to suit your own tastes or the ingredients you have at home..
             </div>
             <a href="/blogs/vegan-recipes" className="see_more">
