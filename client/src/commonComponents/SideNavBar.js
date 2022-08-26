@@ -59,8 +59,8 @@ export default function SideNavBar() {
       >
         <Tab label="Fruits" {...a11yProps(0)} />
         <Tab label="Vegetable" {...a11yProps(1)} />
-        <Tab label="Bakery" {...a11yProps(2)} />
-        <Tab label="Frozen" {...a11yProps(3)} />
+        <Tab label="Meat" {...a11yProps(2)} />
+        <Tab label="Bakery" {...a11yProps(3)} />
         <Tab label="Drinks" {...a11yProps(4)} />
       </Tabs>
       <SideNavBarPanel value={value} index={0}>
@@ -70,13 +70,13 @@ export default function SideNavBar() {
       <DisplayItems categoryType={"vegetable"}/>
       </SideNavBarPanel>
       <SideNavBarPanel value={value} index={2}>
-      Coming Soon!
+      <DisplayItems categoryType={"meat"}/>
       </SideNavBarPanel>
       <SideNavBarPanel value={value} index={3}>
-      Coming Soon!
+      <DisplayItems categoryType={"bakery"}/>
       </SideNavBarPanel>
       <SideNavBarPanel value={value} index={4}>
-      Coming Soon!
+      <DisplayItems categoryType={"drinks"}/>
       </SideNavBarPanel>
     </Box>
   );
