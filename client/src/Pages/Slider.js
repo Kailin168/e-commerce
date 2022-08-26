@@ -1,5 +1,6 @@
 import { sliderClasses } from "@mui/material";
 import React from "react";
+import RecipeReviewCard from "./RecipeReviewCard";
 
 
 function Slider() {
@@ -20,12 +21,12 @@ function Slider() {
       </a>
     </div>
   </div>
-  iv>
+
   <div className="box">
     <div className="content">
       <a href="/collections/vegan-cheese">
         <div className="thumb">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCSS2OqXdonaql39SLlkZZjGYH_qAHtE-Mltit6fTud0dNW5fPHhkEXMgGRlF4Dw3fQxk&usqp=CAU" />
+          <img src="https://cdn.shopify.com/s/files/1/0587/2045/2783/articles/salad-scaled_186x146_crop_center.jpg?v=1633007458" />
         </div>
         <h4>Produce</h4>
       </a>
@@ -86,20 +87,20 @@ function Slider() {
       {/**/}{" "}
       <div className="large-tile large-tile--clickable">
         <img
-          src="https://i5.peapod.com/c/XW/XWM3S.jpg"
+          src="https://assets3.thrillist.com/v1/image/2828493/1200x600/scale"
           alt="A serving board with lunch sandwiches on it"
           className="large-tile_image"
         />{" "}
         {/**/}{" "}
         <div className="large-tile_content">
           <div>
-            <h2 className="h6-bold large-tile_headline">
-              Elevate Any Sandwich
+            <h2 className="h6-bold large-tile_headline" >
+              Make the switch to Plant Based!
             </h2>{" "}
             <div className="large-tile_description">
               <p className="large-tile_text-block">
                 <span>
-                  With NEW Taste of Inspirations® Deli Meats and Cheeses. Bring
+                  With the all NEW Taste of Beyond® and Immpossible® plant-based meats! Bring
                   high quality taste, without the high quality cost.
                 </span>
               </p>
@@ -108,29 +109,7 @@ function Slider() {
               <button className="btn large-tile_link-btn">
                 Shop Select Stores
                 <div className="large-tile_link-stroke">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    aria-label="Stroke 1"
-                    viewBox="0 0 7 12"
-                    role="presentation"
-                    aria-hidden="true"
-                    focusable="false"
-                    className=""
-                  >
-                    <title lang="en">Stroke 1</title>
-                    <desc />
-                    <g fill="" stroke="">
-                      <path
-                        d="m1 1 5 5-5 5"
-                        strokeWidth={2}
-                        fill="none"
-                        fillRule="evenodd"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="large-tile_link-stroke-color"
-                      />
-                    </g>
-                  </svg>
+
                 </div>
               </button>
             </div>
@@ -164,29 +143,7 @@ function Slider() {
               <button className="btn large-tile_link-btn">
                 Shop Now
                 <div className="large-tile_link-stroke">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    aria-label="Stroke 1"
-                    viewBox="0 0 7 12"
-                    role="presentation"
-                    aria-hidden="true"
-                    focusable="false"
-                    className=""
-                  >
-                    <title lang="en">Stroke 1</title>
-                    <desc />
-                    <g fill="" stroke="">
-                      <path
-                        d="m1 1 5 5-5 5"
-                        strokeWidth={2}
-                        fill="none"
-                        fillRule="evenodd"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="large-tile_link-stroke-color"
-                      />
-                    </g>
-                  </svg>
+                  
                 </div>
               </button>
             </div>
@@ -220,29 +177,7 @@ function Slider() {
               <button className="btn large-tile_link-btn">
                 Clip Now
                 <div className="large-tile_link-stroke">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    aria-label="Stroke 1"
-                    viewBox="0 0 7 12"
-                    role="presentation"
-                    aria-hidden="true"
-                    focusable="false"
-                    className=""
-                  >
-                    <title lang="en">Stroke 1</title>
-                    <desc />
-                    <g fill="" stroke="">
-                      <path
-                        d="m1 1 5 5-5 5"
-                        strokeWidth={2}
-                        fill="none"
-                        fillRule="evenodd"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="large-tile_link-stroke-color"
-                      />
-                    </g>
-                  </svg>
+
                 </div>
               </button>
             </div>
@@ -253,6 +188,7 @@ function Slider() {
     </div>
   </div>
 </div>
+
 
 
 <div className="recipes_container">

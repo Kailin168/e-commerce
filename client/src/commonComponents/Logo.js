@@ -7,7 +7,7 @@ function Logo() {
     <div style={{display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center'}}>
-      <img height={"200px"} src="/Logo.png" alt="logo" />
+      <img height={"287px"} src="/Logo.png" alt="logo" />
     </div>
   );
 }
