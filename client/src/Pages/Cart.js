@@ -32,7 +32,7 @@ function Cart() {
 
   return (
     <div>
-      <div style={{textAlign: "center"}}>
+      <div style={{textAlign: "center", fontSize: "25px", marginBottom: "25px"}}>
         <br></br>
         {isLoggedIn(auth.user) ? "Welcome:" : 'Please log in'}
         <br></br>

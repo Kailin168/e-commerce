@@ -8,12 +8,12 @@ import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Avatar from '@mui/material/Avatar';
-import ImageIcon from '@mui/icons-material/Image';
 import CommentIcon from '@mui/icons-material/Comment';
 import ForestIcon from '@mui/icons-material/Forest';
 import ScaleIcon from '@mui/icons-material/Scale';
 import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
 import AuthContext from "../lib/AuthContext";
+import Typography from '@mui/material/Typography';
 
 
 function ProductDetails() {
@@ -81,13 +81,16 @@ function ProductDetails() {
         <div style={{
           flexDirection: "column",
           display: "flex",
-          flex: 3
+          flex: 3,
+          paddingRight: "50px"
         }}>
           <div style={{
             minHeight: '500px',
             display: 'flex',
             flex: 5,
-            flexDirection: "column"
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: 'center',
           }}>
             <List sx={{ width: '100%', bgcolor: 'background.paper' }}>
               <ListItem>
@@ -115,7 +118,6 @@ function ProductDetails() {
                 <ListItemText primary={product.price} secondary="Unit Price" />
               </ListItem>
             </List>
-           
             <div style={{
               display: 'flex',
               alignItems: 'center',
@@ -146,18 +148,14 @@ function ProductDetails() {
         </div>
       </div>
       <div style={{
-         display: "flex",
-        flexDirection: "column"
+        display: "flex",
+        flexDirection: "column",
+        padding: "100px",
+        marginTop: "5px"
       }}>
         <List sx={{ width: '100%', bgcolor: 'background.paper' }}>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
           Product Review:
-          {product.reviews && product.reviews.map((item) => {
+          {product.reviews_with_info && product.reviews_with_info.map((item) => {
             return (
               <div>
                 <ListItem>
@@ -166,7 +164,20 @@ function ProductDetails() {
                       <CommentIcon />
                     </Avatar>
                   </ListItemAvatar>
-                  <ListItemText primary={item.review} />
+                  <ListItemText primary={item.review} secondary={
+                    <>
+                      <Typography
+                        sx={{ display: 'inline' }}
+                        component="span"
+                        variant="body2"
+                        color="text.primary"
+                      >
+                        Reviewed by: {item.user.username}
+                      </Typography>
+                      <div>
+                        {(new Date(item.updated_at)).toLocaleString()}
+                      </div>
+                    </>} />
                 </ListItem>
               </div>
             )
