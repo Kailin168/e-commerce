@@ -81,13 +81,16 @@ function ProductDetails() {
         <div style={{
           flexDirection: "column",
           display: "flex",
-          flex: 3
+          flex: 3,
+          paddingRight: "50px"
         }}>
           <div style={{
             minHeight: '500px',
             display: 'flex',
             flex: 5,
-            flexDirection: "column"
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: 'center',
           }}>
             <List sx={{ width: '100%', bgcolor: 'background.paper' }}>
               <ListItem>
@@ -146,15 +149,11 @@ function ProductDetails() {
       </div>
       <div style={{
         display: "flex",
-        flexDirection: "column"
+        flexDirection: "column",
+        padding: "100px",
+        marginTop: "5px"
       }}>
         <List sx={{ width: '100%', bgcolor: 'background.paper' }}>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
           Product Review:
           {product.reviews_with_info && product.reviews_with_info.map((item) => {
             return (
