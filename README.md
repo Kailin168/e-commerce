@@ -10,9 +10,6 @@
 
 - [Kai Lin](https://github.com/Kailin168)
 
-<img width="1426" alt="Screen Shot 2022-09-19 at 3 49 41 PM" src="https://user-images.githubusercontent.com/103536761/224436312-3368b63c-ba54-42db-b546-9cbc5d90ddb5.png">
-
-
 
 # System dependencies
 
