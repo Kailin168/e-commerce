@@ -1,14 +1,6 @@
 
-# weConnect (Social Media)
+# Vegan Market(e-commerce)
 
-- Social media platform that enables users to create custom profiles and interact with other users.
-
-DEMO: http://ec2-54-210-65-11.compute-1.amazonaws.com/
-
-Testing user account:
-
-Username: testing
-Password: testing123
 
 <img width="1411" alt="Screen Shot 2022-09-19 at 3 44 01 PM" src="https://user-images.githubusercontent.com/103536761/224435096-29738d10-1ddb-4105-a1a1-9f4933dc6a5e.png">
 
